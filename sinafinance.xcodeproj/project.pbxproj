@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2504A289173958FA009D8C54 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2504A288173958FA009D8C54 /* README.md */; };
+		2504A28D17395CE7009D8C54 /* No320AbstractBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 2504A28C17395CE7009D8C54 /* No320AbstractBoard.m */; };
+		2504A29117395D72009D8C54 /* TestBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 2504A29017395D72009D8C54 /* TestBoard.m */; };
+		2504A51B173968E6009D8C54 /* No320TabBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 2504A51A173968E6009D8C54 /* No320TabBoard.m */; };
+		2504A51E17396BEB009D8C54 /* Bee_UITabBarBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 2504A51D17396BEB009D8C54 /* Bee_UITabBarBoard.m */; };
+		2504A52117397AA4009D8C54 /* No320HighlightTabBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 2504A52017397AA4009D8C54 /* No320HighlightTabBoard.m */; };
 		5D47FAB41738E23200A4EB45 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D47FAB31738E23200A4EB45 /* QuartzCore.framework */; };
 		5D47FAB61738E23200A4EB45 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D47FAB51738E23200A4EB45 /* Security.framework */; };
 		5D47FAB81738E23200A4EB45 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D47FAB71738E23200A4EB45 /* SystemConfiguration.framework */; };
@@ -247,6 +253,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2504A288173958FA009D8C54 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		2504A28B17395CE7009D8C54 /* No320AbstractBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = No320AbstractBoard.h; sourceTree = "<group>"; };
+		2504A28C17395CE7009D8C54 /* No320AbstractBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = No320AbstractBoard.m; sourceTree = "<group>"; };
+		2504A28F17395D72009D8C54 /* TestBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestBoard.h; sourceTree = "<group>"; };
+		2504A29017395D72009D8C54 /* TestBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestBoard.m; sourceTree = "<group>"; };
+		2504A519173968E6009D8C54 /* No320TabBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = No320TabBoard.h; sourceTree = "<group>"; };
+		2504A51A173968E6009D8C54 /* No320TabBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = No320TabBoard.m; sourceTree = "<group>"; };
+		2504A51C17396BEB009D8C54 /* Bee_UITabBarBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bee_UITabBarBoard.h; sourceTree = "<group>"; };
+		2504A51D17396BEB009D8C54 /* Bee_UITabBarBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bee_UITabBarBoard.m; sourceTree = "<group>"; };
+		2504A51F17397AA4009D8C54 /* No320HighlightTabBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = No320HighlightTabBoard.h; sourceTree = "<group>"; };
+		2504A52017397AA4009D8C54 /* No320HighlightTabBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = No320HighlightTabBoard.m; sourceTree = "<group>"; };
 		5D47FAB01738E23200A4EB45 /* sinafinance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sinafinance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D47FAB31738E23200A4EB45 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		5D47FAB51738E23200A4EB45 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -729,6 +746,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2504A287173958FA009D8C54 /* bee_abstract_board */ = {
+			isa = PBXGroup;
+			children = (
+				2504A288173958FA009D8C54 /* README.md */,
+				2504A28B17395CE7009D8C54 /* No320AbstractBoard.h */,
+				2504A28C17395CE7009D8C54 /* No320AbstractBoard.m */,
+			);
+			path = bee_abstract_board;
+			sourceTree = "<group>";
+		};
+		2504A28E17395D40009D8C54 /* boards */ = {
+			isa = PBXGroup;
+			children = (
+				2504A28F17395D72009D8C54 /* TestBoard.h */,
+				2504A29017395D72009D8C54 /* TestBoard.m */,
+				2504A519173968E6009D8C54 /* No320TabBoard.h */,
+				2504A51A173968E6009D8C54 /* No320TabBoard.m */,
+				2504A51F17397AA4009D8C54 /* No320HighlightTabBoard.h */,
+				2504A52017397AA4009D8C54 /* No320HighlightTabBoard.m */,
+			);
+			path = boards;
+			sourceTree = "<group>";
+		};
 		5D47FAA71738E23100A4EB45 = {
 			isa = PBXGroup;
 			children = (
@@ -1559,6 +1599,7 @@
 		5D47FD831738EC1700A4EB45 /* vendor */ = {
 			isa = PBXGroup;
 			children = (
+				2504A287173958FA009D8C54 /* bee_abstract_board */,
 				5DCB35F017390D2000245AFF /* No320HeighlightTabViewController */,
 			);
 			path = vendor;
@@ -1584,6 +1625,7 @@
 			children = (
 				5D47FD861738EC1700A4EB45 /* apis */,
 				5D47FD871738EC1700A4EB45 /* assets */,
+				2504A28E17395D40009D8C54 /* boards */,
 				5D47FD8A1738EC1700A4EB45 /* controllers */,
 				5D47FD8B1738EC1700A4EB45 /* helpers */,
 				5D47FD8C1738EC1700A4EB45 /* models */,
@@ -1744,6 +1786,8 @@
 				5DCB35F617390D2000245AFF /* No320HeighlightTabViewController.h */,
 				5DCB35F717390D2000245AFF /* No320HeighlightTabViewController.m */,
 				5DCB35F817390D2000245AFF /* README.md */,
+				2504A51C17396BEB009D8C54 /* Bee_UITabBarBoard.h */,
+				2504A51D17396BEB009D8C54 /* Bee_UITabBarBoard.m */,
 			);
 			path = No320HeighlightTabViewController;
 			sourceTree = "<group>";
@@ -1825,6 +1869,7 @@
 				5DCB35EF17390CC600245AFF /* finiance_tab.bundle in Resources */,
 				5DCB35FC17390D2000245AFF /* README.md in Resources */,
 				5DCB360717390F2700245AFF /* RootViewController.xib in Resources */,
+				2504A289173958FA009D8C54 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2041,6 +2086,11 @@
 				5DCB35FA17390D2000245AFF /* CustomTabBarViewController.m in Sources */,
 				5DCB35FB17390D2000245AFF /* No320HeighlightTabViewController.m in Sources */,
 				5DCB360617390F2700245AFF /* RootViewController.m in Sources */,
+				2504A28D17395CE7009D8C54 /* No320AbstractBoard.m in Sources */,
+				2504A29117395D72009D8C54 /* TestBoard.m in Sources */,
+				2504A51B173968E6009D8C54 /* No320TabBoard.m in Sources */,
+				2504A51E17396BEB009D8C54 /* Bee_UITabBarBoard.m in Sources */,
+				2504A52117397AA4009D8C54 /* No320HighlightTabBoard.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

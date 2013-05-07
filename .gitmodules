@@ -1,3 +1,6 @@
 [submodule "vendor/No320HeighlightTabViewController"]
 	path = vendor/No320HeighlightTabViewController
 	url = https://github.com/i5ting/No320HeighlightTabViewController.git
+[submodule "vendor/bee_abstract_board"]
+	path = vendor/bee_abstract_board
+	url = https://github.com/i5ting/bee_abstract_board.git

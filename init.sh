@@ -57,6 +57,7 @@ mkdir -p src/app/assets/images
 mkdir -p src/app/assets/xibs  #new
 mkdir -p src/app/assets/bundles #new
 mkdir -p src/app/controllers 
+mkdir -p src/app/boards
 mkdir -p src/app/helpers        
 mkdir -p src/app/models      
 mkdir -p src/app/views

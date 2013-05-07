@@ -15,6 +15,13 @@
 
 #pragma mark -
 
+#define DEV 0
+
+
+#import "TestBoard.h"
+#import "No320HighlightTabBoard.h"
+
+
 @implementation AppDelegate
 
 @synthesize window = _window;
@@ -25,13 +32,23 @@
 
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     self.window.backgroundColor = [UIColor whiteColor];
-	self.window.rootViewController = [BeeUIStackGroup stackGroupWithFirstStack:[BeeUIStack stackWithFirstBoard:[CatelogBoard board]]];
+	
     
     CustomTabBarViewController *tabbarController = [[No320HeighlightTabViewController alloc] initWithBundleName:@"finiance_tab"];
     //    CustomTabBarViewController *tabbarController = [[CustomTabBarViewController alloc] initWithBundleName:@"xiangqu"];
     self.window.frame = CGRectMake(0, 0, 320, UI_MAX_HEIGHT);
     self.window.rootViewController = tabbarController;
     [tabbarController release];
+    
+    
+//    self.window.rootViewController = [BeeUIStackGroup stackGroupWithFirstStack:[BeeUIStack stackWithFirstBoard:[TestBoard board]]];
+    
+    self.window.rootViewController = [[No320HighlightTabBoard alloc] initWithBundleName:@"finiance_tab"];
+    
+    if (DEV != 0) {
+        self.window.rootViewController = [BeeUIStackGroup stackGroupWithFirstStack:[BeeUIStack stackWithFirstBoard:[CatelogBoard board]]];
+    }
+    
     [self.window makeKeyAndVisible];
 	
 	[BeeDebugger show];
