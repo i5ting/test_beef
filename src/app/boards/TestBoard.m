@@ -63,7 +63,9 @@ DEF_SINGLETON(TestBoard)
 		_innerView.backgroundColor = [UIColor clearColor];
 		[self.view addSubview:_innerView];
         
+        self.view.backgroundColor = [UIColor orangeColor];
         
+       
 	}
 	else if ( [signal is:BeeUIBoard.DELETE_VIEWS] )
 	{
@@ -72,6 +74,7 @@ DEF_SINGLETON(TestBoard)
 	else if ( [signal is:BeeUIBoard.LAYOUT_VIEWS] )
 	{
 		// 界面重新布局
+         
 	}
 	else if ( [signal is:BeeUIBoard.LOAD_DATAS] )
 	{
@@ -88,6 +91,7 @@ DEF_SINGLETON(TestBoard)
 	else if ( [signal is:BeeUIBoard.DID_APPEAR] )
 	{
 		// 已经显示
+         [self.view setFrame: CGRectMake(0, 0, 320, 200)];
 	}
 	else if ( [signal is:BeeUIBoard.WILL_DISAPPEAR] )
 	{
