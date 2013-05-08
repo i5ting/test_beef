@@ -9,7 +9,7 @@
 #import "Bee_UIBoard.h"
 
 #import "CustomerTab.h"
-#import "Bee_TabbarItemTmpl.h"
+#import "Bee_TabbarItem.h"
 
 #import "Bee_UITabBarBoard.h"
 
@@ -24,7 +24,7 @@
     
     
     UIView *_contentView;
-    Bee_TabbarItemTmpl *_customView;
+    Bee_TabbarItem *_customView;
     UIImageView *bgView;
     BOOL _isHide;
     
@@ -43,7 +43,7 @@ AS_SINGLETON( No320TabBoard )
 
 
 
-@property (retain, nonatomic)Bee_TabbarItemTmpl *customView;
+@property (retain, nonatomic)Bee_TabbarItem *customView;
 @property (assign, nonatomic)BOOL isHidden;
 @property (assign, nonatomic)BOOL logTrace;
 

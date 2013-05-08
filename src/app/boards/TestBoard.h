@@ -8,6 +8,10 @@
 
 #import "No320AbstractBoard.h"
 
-@interface TestBoard : BeeUIBoard
+#import "Lesson2Board.h"
 
+@interface TestBoard : BeeUIBoard
+{
+     Lesson2View1 *	_innerView;
+}
 @end

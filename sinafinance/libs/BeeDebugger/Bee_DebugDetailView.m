@@ -1,9 +1,9 @@
 //
-//	 ______    ______    ______    
-//	/\  __ \  /\  ___\  /\  ___\   
-//	\ \  __<  \ \  __\_ \ \  __\_ 
-//	 \ \_____\ \ \_____\ \ \_____\ 
-//	  \/_____/  \/_____/  \/_____/ 
+//	 ______    ______    ______
+//	/\  __ \  /\  ___\  /\  ___\
+//	\ \  __<  \ \  __\_ \ \  __\_
+//	 \ \_____\ \ \_____\ \ \_____\
+//	  \/_____/  \/_____/  \/_____/
 //
 //	Copyright (c) 2012 BEE creators
 //	http://www.whatsbug.com
@@ -43,7 +43,7 @@
 {
 	self = [super initWithFrame:frame];
 	if ( self )
-	{		
+	{
 		self.backgroundColor = [UIColor clearColor];
 		
 		CGRect contentFrame = frame;
@@ -61,7 +61,7 @@
 		_content.layer.borderColor = [UIColor grayColor].CGColor;
 		_content.layer.borderWidth = 2.0f;
 		[self addSubview:_content];
-
+        
 		CGRect closeFrame;
 		closeFrame.size.width = 40.0f;
 		closeFrame.size.height = 40.0f;
@@ -131,8 +131,8 @@
 		_zoomView.backgroundColor = [UIColor whiteColor];
 		_zoomView.layer.borderColor = [UIColor grayColor].CGColor;
 		_zoomView.layer.borderWidth = 2.0f;
-		[self addSubview:_zoomView];
-
+//		[self addSubview:_zoomView];
+        
 		CGRect closeFrame;
 		closeFrame.size.width = 40.0f;
 		closeFrame.size.height = 40.0f;

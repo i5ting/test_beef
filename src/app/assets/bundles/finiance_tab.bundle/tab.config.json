@@ -13,7 +13,7 @@
     "bglightImageName": "tab_light.png",
     "btns": [
              {
-             "controllerName": "TestBoard",
+             "controllerName": "CatelogBoard",
              "default": "tab_zx.png",
              "heighlighted": "tab_zx_h.png",
              "selected": "tab_zx_h.png",

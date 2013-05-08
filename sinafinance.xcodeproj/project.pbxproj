@@ -10,9 +10,6 @@
 		2504A289173958FA009D8C54 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2504A288173958FA009D8C54 /* README.md */; };
 		2504A28D17395CE7009D8C54 /* No320AbstractBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 2504A28C17395CE7009D8C54 /* No320AbstractBoard.m */; };
 		2504A29117395D72009D8C54 /* TestBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 2504A29017395D72009D8C54 /* TestBoard.m */; };
-		2504A51B173968E6009D8C54 /* No320TabBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 2504A51A173968E6009D8C54 /* No320TabBoard.m */; };
-		2504A51E17396BEB009D8C54 /* Bee_UITabBarBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 2504A51D17396BEB009D8C54 /* Bee_UITabBarBoard.m */; };
-		2504A52117397AA4009D8C54 /* No320HighlightTabBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 2504A52017397AA4009D8C54 /* No320HighlightTabBoard.m */; };
 		5D47FAB41738E23200A4EB45 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D47FAB31738E23200A4EB45 /* QuartzCore.framework */; };
 		5D47FAB61738E23200A4EB45 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D47FAB51738E23200A4EB45 /* Security.framework */; };
 		5D47FAB81738E23200A4EB45 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D47FAB71738E23200A4EB45 /* SystemConfiguration.framework */; };
@@ -30,11 +27,6 @@
 		5D47FAD21738E23200A4EB45 /* folder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D47FAD11738E23200A4EB45 /* folder@2x.png */; };
 		5D47FAD41738E23200A4EB45 /* heat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D47FAD31738E23200A4EB45 /* heat@2x.png */; };
 		5D47FAD61738E23200A4EB45 /* tap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D47FAD51738E23200A4EB45 /* tap@2x.png */; };
-		5D47FAD81738E23200A4EB45 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D47FAD71738E23200A4EB45 /* Default.png */; };
-		5D47FADA1738E23200A4EB45 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D47FAD91738E23200A4EB45 /* Default@2x.png */; };
-		5D47FADC1738E23200A4EB45 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D47FADB1738E23200A4EB45 /* Default-568h@2x.png */; };
-		5D47FADE1738E23200A4EB45 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D47FADD1738E23200A4EB45 /* icon.png */; };
-		5D47FAE01738E23200A4EB45 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D47FADF1738E23200A4EB45 /* icon@2x.png */; };
 		5D47FAE31738E23200A4EB45 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 5D47FAE21738E23200A4EB45 /* iTunesArtwork */; };
 		5D47FB751738E23300A4EB45 /* Bee_SystemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D47FB741738E23300A4EB45 /* Bee_SystemInfo.m */; };
 		5D47FB771738E23300A4EB45 /* Bee_Ticker.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D47FB761738E23300A4EB45 /* Bee_Ticker.m */; };
@@ -244,12 +236,17 @@
 		5D47FD821738EB2C00A4EB45 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5D47FD811738EB2C00A4EB45 /* README.md */; };
 		5D47FD991738EC1700A4EB45 /* sina_finance_ios.db in Resources */ = {isa = PBXBuildFile; fileRef = 5D47FD931738EC1700A4EB45 /* sina_finance_ios.db */; };
 		5DCB35EF17390CC600245AFF /* finiance_tab.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5DCB35EE17390CC600245AFF /* finiance_tab.bundle */; };
-		5DCB35F917390D2000245AFF /* Bee_TabbarItemTmpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB35F217390D2000245AFF /* Bee_TabbarItemTmpl.m */; };
-		5DCB35FA17390D2000245AFF /* CustomTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB35F517390D2000245AFF /* CustomTabBarViewController.m */; };
-		5DCB35FB17390D2000245AFF /* No320HeighlightTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB35F717390D2000245AFF /* No320HeighlightTabViewController.m */; };
-		5DCB35FC17390D2000245AFF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5DCB35F817390D2000245AFF /* README.md */; };
 		5DCB360617390F2700245AFF /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB360417390F2700245AFF /* RootViewController.m */; };
 		5DCB360717390F2700245AFF /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DCB360517390F2700245AFF /* RootViewController.xib */; };
+		5DCB360D1739F9E900245AFF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DCB36081739F9E900245AFF /* Default-568h@2x.png */; };
+		5DCB360E1739F9E900245AFF /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DCB36091739F9E900245AFF /* icon.png */; };
+		5DCB360F1739F9E900245AFF /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DCB360A1739F9E900245AFF /* icon@2x.png */; };
+		5DCB36101739F9E900245AFF /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DCB360B1739F9E900245AFF /* Default.png */; };
+		5DCB36111739F9E900245AFF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DCB360C1739F9E900245AFF /* Default@2x.png */; };
+		5DCB38AC173A62B800245AFF /* Bee_CustomTabBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB38A5173A62B800245AFF /* Bee_CustomTabBoard.m */; };
+		5DCB38AD173A62B800245AFF /* Bee_TabbarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB38A7173A62B800245AFF /* Bee_TabbarItem.m */; };
+		5DCB38AE173A62B800245AFF /* no320_bee_tab_board.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB38AA173A62B800245AFF /* no320_bee_tab_board.m */; };
+		5DCB38AF173A62B800245AFF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5DCB38AB173A62B800245AFF /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -258,12 +255,6 @@
 		2504A28C17395CE7009D8C54 /* No320AbstractBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = No320AbstractBoard.m; sourceTree = "<group>"; };
 		2504A28F17395D72009D8C54 /* TestBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestBoard.h; sourceTree = "<group>"; };
 		2504A29017395D72009D8C54 /* TestBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestBoard.m; sourceTree = "<group>"; };
-		2504A519173968E6009D8C54 /* No320TabBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = No320TabBoard.h; sourceTree = "<group>"; };
-		2504A51A173968E6009D8C54 /* No320TabBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = No320TabBoard.m; sourceTree = "<group>"; };
-		2504A51C17396BEB009D8C54 /* Bee_UITabBarBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bee_UITabBarBoard.h; sourceTree = "<group>"; };
-		2504A51D17396BEB009D8C54 /* Bee_UITabBarBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bee_UITabBarBoard.m; sourceTree = "<group>"; };
-		2504A51F17397AA4009D8C54 /* No320HighlightTabBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = No320HighlightTabBoard.h; sourceTree = "<group>"; };
-		2504A52017397AA4009D8C54 /* No320HighlightTabBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = No320HighlightTabBoard.m; sourceTree = "<group>"; };
 		5D47FAB01738E23200A4EB45 /* sinafinance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sinafinance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D47FAB31738E23200A4EB45 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		5D47FAB51738E23200A4EB45 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -282,11 +273,6 @@
 		5D47FAD11738E23200A4EB45 /* folder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "folder@2x.png"; path = "Resources/folder@2x.png"; sourceTree = "<group>"; };
 		5D47FAD31738E23200A4EB45 /* heat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "heat@2x.png"; path = "Resources/heat@2x.png"; sourceTree = "<group>"; };
 		5D47FAD51738E23200A4EB45 /* tap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tap@2x.png"; path = "Resources/tap@2x.png"; sourceTree = "<group>"; };
-		5D47FAD71738E23200A4EB45 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/Default.png; sourceTree = "<group>"; };
-		5D47FAD91738E23200A4EB45 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/Default@2x.png"; sourceTree = "<group>"; };
-		5D47FADB1738E23200A4EB45 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/Default-568h@2x.png"; sourceTree = "<group>"; };
-		5D47FADD1738E23200A4EB45 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = Resources/icon.png; sourceTree = "<group>"; };
-		5D47FADF1738E23200A4EB45 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "Resources/icon@2x.png"; sourceTree = "<group>"; };
 		5D47FAE11738E23200A4EB45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
 		5D47FAE21738E23200A4EB45 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; name = iTunesArtwork; path = Resources/iTunesArtwork; sourceTree = "<group>"; };
 		5D47FAE71738E23200A4EB45 /* Bee.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Bee.h; path = libs/BeeFramework/Bee.h; sourceTree = "<group>"; };
@@ -708,17 +694,22 @@
 		5D47FD811738EB2C00A4EB45 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		5D47FD931738EC1700A4EB45 /* sina_finance_ios.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sina_finance_ios.db; sourceTree = "<group>"; };
 		5DCB35EE17390CC600245AFF /* finiance_tab.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = finiance_tab.bundle; sourceTree = "<group>"; };
-		5DCB35F117390D2000245AFF /* Bee_TabbarItemTmpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bee_TabbarItemTmpl.h; sourceTree = "<group>"; };
-		5DCB35F217390D2000245AFF /* Bee_TabbarItemTmpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bee_TabbarItemTmpl.m; sourceTree = "<group>"; };
-		5DCB35F317390D2000245AFF /* CustomerTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerTab.h; sourceTree = "<group>"; };
-		5DCB35F417390D2000245AFF /* CustomTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTabBarViewController.h; sourceTree = "<group>"; };
-		5DCB35F517390D2000245AFF /* CustomTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTabBarViewController.m; sourceTree = "<group>"; };
-		5DCB35F617390D2000245AFF /* No320HeighlightTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = No320HeighlightTabViewController.h; sourceTree = "<group>"; };
-		5DCB35F717390D2000245AFF /* No320HeighlightTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = No320HeighlightTabViewController.m; sourceTree = "<group>"; };
-		5DCB35F817390D2000245AFF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		5DCB360317390F2700245AFF /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		5DCB360417390F2700245AFF /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		5DCB360517390F2700245AFF /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
+		5DCB36081739F9E900245AFF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		5DCB36091739F9E900245AFF /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		5DCB360A1739F9E900245AFF /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		5DCB360B1739F9E900245AFF /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		5DCB360C1739F9E900245AFF /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		5DCB38A4173A62B800245AFF /* Bee_CustomTabBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bee_CustomTabBoard.h; sourceTree = "<group>"; };
+		5DCB38A5173A62B800245AFF /* Bee_CustomTabBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bee_CustomTabBoard.m; sourceTree = "<group>"; };
+		5DCB38A6173A62B800245AFF /* Bee_TabbarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bee_TabbarItem.h; sourceTree = "<group>"; };
+		5DCB38A7173A62B800245AFF /* Bee_TabbarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bee_TabbarItem.m; sourceTree = "<group>"; };
+		5DCB38A8173A62B800245AFF /* CustomerTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerTab.h; sourceTree = "<group>"; };
+		5DCB38A9173A62B800245AFF /* no320_bee_tab_board.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = no320_bee_tab_board.h; sourceTree = "<group>"; };
+		5DCB38AA173A62B800245AFF /* no320_bee_tab_board.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = no320_bee_tab_board.m; sourceTree = "<group>"; };
+		5DCB38AB173A62B800245AFF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -761,10 +752,6 @@
 			children = (
 				2504A28F17395D72009D8C54 /* TestBoard.h */,
 				2504A29017395D72009D8C54 /* TestBoard.m */,
-				2504A519173968E6009D8C54 /* No320TabBoard.h */,
-				2504A51A173968E6009D8C54 /* No320TabBoard.m */,
-				2504A51F17397AA4009D8C54 /* No320HighlightTabBoard.h */,
-				2504A52017397AA4009D8C54 /* No320HighlightTabBoard.m */,
 			);
 			path = boards;
 			sourceTree = "<group>";
@@ -773,10 +760,10 @@
 			isa = PBXGroup;
 			children = (
 				5D47FD811738EB2C00A4EB45 /* README.md */,
+				5D47FAC91738E23200A4EB45 /* sinafinance */,
 				5DCB35FD17390E4B00245AFF /* test */,
 				5D47FD841738EC1700A4EB45 /* src */,
 				5D47FD831738EC1700A4EB45 /* vendor */,
-				5D47FAC91738E23200A4EB45 /* sinafinance */,
 				5D47FAB21738E23200A4EB45 /* Frameworks */,
 				5D47FAB11738E23200A4EB45 /* Products */,
 			);
@@ -827,11 +814,6 @@
 				5D47FAD11738E23200A4EB45 /* folder@2x.png */,
 				5D47FAD31738E23200A4EB45 /* heat@2x.png */,
 				5D47FAD51738E23200A4EB45 /* tap@2x.png */,
-				5D47FAD71738E23200A4EB45 /* Default.png */,
-				5D47FAD91738E23200A4EB45 /* Default@2x.png */,
-				5D47FADB1738E23200A4EB45 /* Default-568h@2x.png */,
-				5D47FADD1738E23200A4EB45 /* icon.png */,
-				5D47FADF1738E23200A4EB45 /* icon@2x.png */,
 				5D47FAE11738E23200A4EB45 /* Info.plist */,
 				5D47FAE21738E23200A4EB45 /* iTunesArtwork */,
 			);
@@ -1599,8 +1581,8 @@
 		5D47FD831738EC1700A4EB45 /* vendor */ = {
 			isa = PBXGroup;
 			children = (
+				5DCB38A3173A62B800245AFF /* No320HeighlightTabViewController */,
 				2504A287173958FA009D8C54 /* bee_abstract_board */,
-				5DCB35F017390D2000245AFF /* No320HeighlightTabViewController */,
 			);
 			path = vendor;
 			sourceTree = "<group>";
@@ -1654,6 +1636,11 @@
 		5D47FD881738EC1700A4EB45 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				5DCB36081739F9E900245AFF /* Default-568h@2x.png */,
+				5DCB36091739F9E900245AFF /* icon.png */,
+				5DCB360A1739F9E900245AFF /* icon@2x.png */,
+				5DCB360B1739F9E900245AFF /* Default.png */,
+				5DCB360C1739F9E900245AFF /* Default@2x.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -1775,23 +1762,6 @@
 			path = bundles;
 			sourceTree = "<group>";
 		};
-		5DCB35F017390D2000245AFF /* No320HeighlightTabViewController */ = {
-			isa = PBXGroup;
-			children = (
-				5DCB35F117390D2000245AFF /* Bee_TabbarItemTmpl.h */,
-				5DCB35F217390D2000245AFF /* Bee_TabbarItemTmpl.m */,
-				5DCB35F317390D2000245AFF /* CustomerTab.h */,
-				5DCB35F417390D2000245AFF /* CustomTabBarViewController.h */,
-				5DCB35F517390D2000245AFF /* CustomTabBarViewController.m */,
-				5DCB35F617390D2000245AFF /* No320HeighlightTabViewController.h */,
-				5DCB35F717390D2000245AFF /* No320HeighlightTabViewController.m */,
-				5DCB35F817390D2000245AFF /* README.md */,
-				2504A51C17396BEB009D8C54 /* Bee_UITabBarBoard.h */,
-				2504A51D17396BEB009D8C54 /* Bee_UITabBarBoard.m */,
-			);
-			path = No320HeighlightTabViewController;
-			sourceTree = "<group>";
-		};
 		5DCB35FD17390E4B00245AFF /* test */ = {
 			isa = PBXGroup;
 			children = (
@@ -1800,6 +1770,21 @@
 				5DCB360517390F2700245AFF /* RootViewController.xib */,
 			);
 			path = test;
+			sourceTree = "<group>";
+		};
+		5DCB38A3173A62B800245AFF /* No320HeighlightTabViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5DCB38A4173A62B800245AFF /* Bee_CustomTabBoard.h */,
+				5DCB38A5173A62B800245AFF /* Bee_CustomTabBoard.m */,
+				5DCB38A6173A62B800245AFF /* Bee_TabbarItem.h */,
+				5DCB38A7173A62B800245AFF /* Bee_TabbarItem.m */,
+				5DCB38A8173A62B800245AFF /* CustomerTab.h */,
+				5DCB38A9173A62B800245AFF /* no320_bee_tab_board.h */,
+				5DCB38AA173A62B800245AFF /* no320_bee_tab_board.m */,
+				5DCB38AB173A62B800245AFF /* README.md */,
+			);
+			path = No320HeighlightTabViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1858,18 +1843,18 @@
 				5D47FAD21738E23200A4EB45 /* folder@2x.png in Resources */,
 				5D47FAD41738E23200A4EB45 /* heat@2x.png in Resources */,
 				5D47FAD61738E23200A4EB45 /* tap@2x.png in Resources */,
-				5D47FAD81738E23200A4EB45 /* Default.png in Resources */,
-				5D47FADA1738E23200A4EB45 /* Default@2x.png in Resources */,
-				5D47FADC1738E23200A4EB45 /* Default-568h@2x.png in Resources */,
-				5D47FADE1738E23200A4EB45 /* icon.png in Resources */,
-				5D47FAE01738E23200A4EB45 /* icon@2x.png in Resources */,
 				5D47FAE31738E23200A4EB45 /* iTunesArtwork in Resources */,
 				5D47FD821738EB2C00A4EB45 /* README.md in Resources */,
 				5D47FD991738EC1700A4EB45 /* sina_finance_ios.db in Resources */,
 				5DCB35EF17390CC600245AFF /* finiance_tab.bundle in Resources */,
-				5DCB35FC17390D2000245AFF /* README.md in Resources */,
 				5DCB360717390F2700245AFF /* RootViewController.xib in Resources */,
 				2504A289173958FA009D8C54 /* README.md in Resources */,
+				5DCB360D1739F9E900245AFF /* Default-568h@2x.png in Resources */,
+				5DCB360E1739F9E900245AFF /* icon.png in Resources */,
+				5DCB360F1739F9E900245AFF /* icon@2x.png in Resources */,
+				5DCB36101739F9E900245AFF /* Default.png in Resources */,
+				5DCB36111739F9E900245AFF /* Default@2x.png in Resources */,
+				5DCB38AF173A62B800245AFF /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2082,15 +2067,12 @@
 				5D47FD6E1738E23700A4EB45 /* OpenUDID.m in Sources */,
 				5D47FD721738E23700A4EB45 /* main.m in Sources */,
 				5D47FD751738E23700A4EB45 /* AppDelegate.m in Sources */,
-				5DCB35F917390D2000245AFF /* Bee_TabbarItemTmpl.m in Sources */,
-				5DCB35FA17390D2000245AFF /* CustomTabBarViewController.m in Sources */,
-				5DCB35FB17390D2000245AFF /* No320HeighlightTabViewController.m in Sources */,
 				5DCB360617390F2700245AFF /* RootViewController.m in Sources */,
 				2504A28D17395CE7009D8C54 /* No320AbstractBoard.m in Sources */,
 				2504A29117395D72009D8C54 /* TestBoard.m in Sources */,
-				2504A51B173968E6009D8C54 /* No320TabBoard.m in Sources */,
-				2504A51E17396BEB009D8C54 /* Bee_UITabBarBoard.m in Sources */,
-				2504A52117397AA4009D8C54 /* No320HighlightTabBoard.m in Sources */,
+				5DCB38AC173A62B800245AFF /* Bee_CustomTabBoard.m in Sources */,
+				5DCB38AD173A62B800245AFF /* Bee_TabbarItem.m in Sources */,
+				5DCB38AE173A62B800245AFF /* no320_bee_tab_board.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2112,7 +2094,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -2131,7 +2113,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

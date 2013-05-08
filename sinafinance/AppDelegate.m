@@ -11,16 +11,14 @@
 #import "Bee_Debug.h"
 // #import "Bee_UnitTest.h"
 
-#import "No320HeighlightTabViewController.h"
 
 #pragma mark -
 
 #define DEV 0
 
 
-#import "TestBoard.h"
-#import "No320HighlightTabBoard.h"
-
+#import "TestBoard.h" 
+#import "Bee_CustomTabBoard.h"
 
 @implementation AppDelegate
 
@@ -34,16 +32,18 @@
     self.window.backgroundColor = [UIColor whiteColor];
 	
     
-    CustomTabBarViewController *tabbarController = [[No320HeighlightTabViewController alloc] initWithBundleName:@"finiance_tab"];
+//    CustomTabBarViewController *tabbarController = [[No320HeighlightTabViewController alloc] initWithBundleName:@"finiance_tab"];
     //    CustomTabBarViewController *tabbarController = [[CustomTabBarViewController alloc] initWithBundleName:@"xiangqu"];
     self.window.frame = CGRectMake(0, 0, 320, UI_MAX_HEIGHT);
-    self.window.rootViewController = tabbarController;
-    [tabbarController release];
+//    self.window.rootViewController = tabbarController;
+//    [tabbarController release];
     
     
 //    self.window.rootViewController = [BeeUIStackGroup stackGroupWithFirstStack:[BeeUIStack stackWithFirstBoard:[TestBoard board]]];
     
-    self.window.rootViewController = [[No320HighlightTabBoard alloc] initWithBundleName:@"finiance_tab"];
+//    self.window.rootViewController = [[No320HighlightTabBoard alloc] initWithBundleName:@"finiance_tab"];
+    
+    self.window.rootViewController = [[BeeCustomTabBoard alloc] initWithBundleName:@"finiance_tab"];
     
     if (DEV != 0) {
         self.window.rootViewController = [BeeUIStackGroup stackGroupWithFirstStack:[BeeUIStack stackWithFirstBoard:[CatelogBoard board]]];

@@ -1,18 +1,27 @@
 //
-//  No320HighlightTabBoard.m
-//  sinafinance
+//	 ______    ______    ______
+//	/\  __ \  /\  ___\  /\  ___\
+//	\ \  __<  \ \  __\_ \ \  __\_
+//	 \ \_____\ \ \_____\ \ \_____\
+//	  \/_____/  \/_____/  \/_____/
 //
-//  Created by sang alfred on 5/8/13.
+//	Powered by BeeFramework
 //
+//
+//  no320_bee_tab_board.h
+//  git;
+//
+//  Created by sang on 5/8/13.
+//    Copyright (c) 2013 alfred sang. All rights reserved.
 //
 
-#import "No320HighlightTabBoard.h"
+#import "Bee_CustomTabBoard.h"
 
-@interface No320HighlightTabBoard ()
+@interface BeeCustomTabBoard ()
 
 @end
 
-@implementation No320HighlightTabBoard
+@implementation BeeCustomTabBoard
 
 
 #pragma mark -
@@ -28,7 +37,7 @@
 
 
 -(void)log:(NSString *)str{
-    NSLog(@"%@:%@",@"No320HeighlightTabViewController",str);
+    NSLog(@"%@:%@",@"BeeCustomTabBoard",str);
 }
 
 
@@ -51,7 +60,5 @@
     int _width = 320/[self.__controllerArray count];
     return CGRectMake(_width*(i - 1)-4, 0, _width+6, 46);
 }
-
-
 
 @end

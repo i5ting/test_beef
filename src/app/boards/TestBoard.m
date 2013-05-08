@@ -23,6 +23,24 @@ DEF_SINGLETON(TestBoard)
 	[super handleUISignal:signal];
 }
 
+
+// Lesson2View1 signal goes here
+- (void)handleUISignal_Lesson2View1:(BeeUISignal *)signal
+{
+	[super handleUISignal:signal];
+}
+
+// Lesson2View2 signal goes here
+- (void)handleUISignal_Lesson2View2:(BeeUISignal *)signal
+{
+	[super handleUISignal:signal];
+	
+	if ( [signal is:Lesson2View2.TEST] )
+	{
+		[BeeUIAlertView showMessage:@"Signal received" cancelTitle:@"OK"];
+	}
+}
+
 // BeeUIBoard signal goes here
 - (void)handleUISignal_BeeUIBoard:(BeeUISignal *)signal
 {
@@ -32,8 +50,20 @@ DEF_SINGLETON(TestBoard)
 	{
 		// 界面创建
 //        [self hideNavigationBarAnimated:NO];
-		[self setTitleString:@"Lesson 1"];
+		[self setTitleString:@"t 1"];
 		[self showNavigationBarAnimated:NO];
+        
+        CGRect innerFrame;
+		innerFrame.size.width = self.viewSize.width - 20.0f;
+		innerFrame.size.height = 44.0f;
+		innerFrame.origin.x = 10.0f;
+		innerFrame.origin.y = self.viewSize.height - innerFrame.size.height - 10.0f-100;
+		
+		_innerView = [[Lesson2View1 alloc] initWithFrame:innerFrame];
+		_innerView.backgroundColor = [UIColor clearColor];
+		[self.view addSubview:_innerView];
+        
+        
 	}
 	else if ( [signal is:BeeUIBoard.DELETE_VIEWS] )
 	{
