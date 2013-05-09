@@ -149,7 +149,7 @@ DEF_NOTIFICATION( BACKGROUND_CHANGED )
 	
 	[self setNeedsDisplay];
 }
-
+ 
 + (void)setBackgroundImage:(UIImage *)image
 {
 	[image retain];

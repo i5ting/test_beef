@@ -30,19 +30,6 @@
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "sinafinance/libs/BeeDebugger/Bee_DebugWindow.m"
-         timestampString = "389686960.548774"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "410"
-         endingLineNumber = "410"
-         landmarkName = "-handleUISignal:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
@@ -53,6 +40,58 @@
          startingLineNumber = "294"
          endingLineNumber = "294"
          landmarkName = "-addCustomElements"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "sinafinance/libs/BeeFramework/MVC/View/Bee_UIScrollView.m"
+         timestampString = "389780890.402248"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "1302"
+         endingLineNumber = "1302"
+         landmarkName = "-numberOfLinesInScrollView:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "sinafinance/libs/BeeFramework/MVC/View/Bee_UIScrollView.m"
+         timestampString = "389780891.900099"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "1307"
+         endingLineNumber = "1307"
+         landmarkName = "-numberOfViewsInScrollView:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "sinafinance/libs/BeeFramework/MVC/View/Bee_UIScrollView.m"
+         timestampString = "389780892.607106"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "1312"
+         endingLineNumber = "1312"
+         landmarkName = "-scrollView:viewForIndex:scale:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "sinafinance/libs/BeeFramework/MVC/View/Bee_UIScrollView.m"
+         timestampString = "389780893.676072"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "1317"
+         endingLineNumber = "1317"
+         landmarkName = "-scrollView:sizeForIndex:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
