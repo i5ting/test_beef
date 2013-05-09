@@ -235,6 +235,13 @@
 		5D47FD7B1738E23700A4EB45 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D47FD7A1738E23700A4EB45 /* libsqlite3.0.dylib */; };
 		5D47FD821738EB2C00A4EB45 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5D47FD811738EB2C00A4EB45 /* README.md */; };
 		5D47FD991738EC1700A4EB45 /* sina_finance_ios.db in Resources */ = {isa = PBXBuildFile; fileRef = 5D47FD931738EC1700A4EB45 /* sina_finance_ios.db */; };
+		5D6DDA92173B493E00329AE9 /* No320_UITabBaseBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6DDA91173B493E00329AE9 /* No320_UITabBaseBoard.m */; };
+		5D6DDA96173B4A5B00329AE9 /* ZXBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6DDA95173B4A5B00329AE9 /* ZXBoard.m */; };
+		5D6DDA99173B4A7500329AE9 /* XGBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6DDA98173B4A7500329AE9 /* XGBoard.m */; };
+		5D6DDA9C173B4A8500329AE9 /* SZBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6DDA9B173B4A8500329AE9 /* SZBoard.m */; };
+		5D6DDA9F173B4AA800329AE9 /* HQBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6DDA9E173B4AA800329AE9 /* HQBoard.m */; };
+		5D6DDAA1173B4D0400329AE9 /* ui_tab_base_board.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5D6DDAA0173B4D0400329AE9 /* ui_tab_base_board.bundle */; };
+		5D6DDAC1173B7A2A00329AE9 /* Bee_UITopTab.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6DDAC0173B7A2A00329AE9 /* Bee_UITopTab.m */; };
 		5DCB35EF17390CC600245AFF /* finiance_tab.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5DCB35EE17390CC600245AFF /* finiance_tab.bundle */; };
 		5DCB360617390F2700245AFF /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB360417390F2700245AFF /* RootViewController.m */; };
 		5DCB360717390F2700245AFF /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DCB360517390F2700245AFF /* RootViewController.xib */; };
@@ -693,6 +700,20 @@
 		5D47FD7A1738E23700A4EB45 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = /usr/lib/libsqlite3.0.dylib; sourceTree = "<absolute>"; };
 		5D47FD811738EB2C00A4EB45 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		5D47FD931738EC1700A4EB45 /* sina_finance_ios.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sina_finance_ios.db; sourceTree = "<group>"; };
+		5D6DDA90173B493E00329AE9 /* No320_UITabBaseBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = No320_UITabBaseBoard.h; sourceTree = "<group>"; };
+		5D6DDA91173B493E00329AE9 /* No320_UITabBaseBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = No320_UITabBaseBoard.m; sourceTree = "<group>"; };
+		5D6DDA94173B4A5A00329AE9 /* ZXBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXBoard.h; sourceTree = "<group>"; };
+		5D6DDA95173B4A5B00329AE9 /* ZXBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXBoard.m; sourceTree = "<group>"; };
+		5D6DDA97173B4A7500329AE9 /* XGBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGBoard.h; sourceTree = "<group>"; };
+		5D6DDA98173B4A7500329AE9 /* XGBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGBoard.m; sourceTree = "<group>"; };
+		5D6DDA9A173B4A8500329AE9 /* SZBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SZBoard.h; sourceTree = "<group>"; };
+		5D6DDA9B173B4A8500329AE9 /* SZBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SZBoard.m; sourceTree = "<group>"; };
+		5D6DDA9D173B4AA800329AE9 /* HQBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQBoard.h; sourceTree = "<group>"; };
+		5D6DDA9E173B4AA800329AE9 /* HQBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQBoard.m; sourceTree = "<group>"; };
+		5D6DDAA0173B4D0400329AE9 /* ui_tab_base_board.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ui_tab_base_board.bundle; sourceTree = "<group>"; };
+		5D6DDABF173B7A2A00329AE9 /* Bee_UITopTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bee_UITopTab.h; sourceTree = "<group>"; };
+		5D6DDAC0173B7A2A00329AE9 /* Bee_UITopTab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bee_UITopTab.m; sourceTree = "<group>"; };
+		5D6DDAC2173B8EE200329AE9 /* mybundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mybundle.h; sourceTree = "<group>"; };
 		5DCB35EE17390CC600245AFF /* finiance_tab.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = finiance_tab.bundle; sourceTree = "<group>"; };
 		5DCB360317390F2700245AFF /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		5DCB360417390F2700245AFF /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
@@ -752,6 +773,16 @@
 			children = (
 				2504A28F17395D72009D8C54 /* TestBoard.h */,
 				2504A29017395D72009D8C54 /* TestBoard.m */,
+				5D6DDA90173B493E00329AE9 /* No320_UITabBaseBoard.h */,
+				5D6DDA91173B493E00329AE9 /* No320_UITabBaseBoard.m */,
+				5D6DDA94173B4A5A00329AE9 /* ZXBoard.h */,
+				5D6DDA95173B4A5B00329AE9 /* ZXBoard.m */,
+				5D6DDA97173B4A7500329AE9 /* XGBoard.h */,
+				5D6DDA98173B4A7500329AE9 /* XGBoard.m */,
+				5D6DDA9A173B4A8500329AE9 /* SZBoard.h */,
+				5D6DDA9B173B4A8500329AE9 /* SZBoard.m */,
+				5D6DDA9D173B4AA800329AE9 /* HQBoard.h */,
+				5D6DDA9E173B4AA800329AE9 /* HQBoard.m */,
 			);
 			path = boards;
 			sourceTree = "<group>";
@@ -1608,10 +1639,10 @@
 				5D47FD861738EC1700A4EB45 /* apis */,
 				5D47FD871738EC1700A4EB45 /* assets */,
 				2504A28E17395D40009D8C54 /* boards */,
+				5D47FD8D1738EC1700A4EB45 /* views */,
 				5D47FD8A1738EC1700A4EB45 /* controllers */,
 				5D47FD8B1738EC1700A4EB45 /* helpers */,
 				5D47FD8C1738EC1700A4EB45 /* models */,
-				5D47FD8D1738EC1700A4EB45 /* views */,
 			);
 			path = app;
 			sourceTree = "<group>";
@@ -1662,6 +1693,7 @@
 		5D47FD8B1738EC1700A4EB45 /* helpers */ = {
 			isa = PBXGroup;
 			children = (
+				5D6DDAC2173B8EE200329AE9 /* mybundle.h */,
 			);
 			path = helpers;
 			sourceTree = "<group>";
@@ -1676,6 +1708,8 @@
 		5D47FD8D1738EC1700A4EB45 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				5D6DDABF173B7A2A00329AE9 /* Bee_UITopTab.h */,
+				5D6DDAC0173B7A2A00329AE9 /* Bee_UITopTab.m */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -1757,6 +1791,7 @@
 		5DCB35ED17390C8800245AFF /* bundles */ = {
 			isa = PBXGroup;
 			children = (
+				5D6DDAA0173B4D0400329AE9 /* ui_tab_base_board.bundle */,
 				5DCB35EE17390CC600245AFF /* finiance_tab.bundle */,
 			);
 			path = bundles;
@@ -1855,6 +1890,7 @@
 				5DCB36101739F9E900245AFF /* Default.png in Resources */,
 				5DCB36111739F9E900245AFF /* Default@2x.png in Resources */,
 				5DCB38AF173A62B800245AFF /* README.md in Resources */,
+				5D6DDAA1173B4D0400329AE9 /* ui_tab_base_board.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2073,6 +2109,12 @@
 				5DCB38AC173A62B800245AFF /* Bee_CustomTabBoard.m in Sources */,
 				5DCB38AD173A62B800245AFF /* Bee_TabbarItem.m in Sources */,
 				5DCB38AE173A62B800245AFF /* no320_bee_tab_board.m in Sources */,
+				5D6DDA92173B493E00329AE9 /* No320_UITabBaseBoard.m in Sources */,
+				5D6DDA96173B4A5B00329AE9 /* ZXBoard.m in Sources */,
+				5D6DDA99173B4A7500329AE9 /* XGBoard.m in Sources */,
+				5D6DDA9C173B4A8500329AE9 /* SZBoard.m in Sources */,
+				5D6DDA9F173B4AA800329AE9 /* HQBoard.m in Sources */,
+				5D6DDAC1173B7A2A00329AE9 /* Bee_UITopTab.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
