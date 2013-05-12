@@ -12,12 +12,16 @@
 @interface Bee_UITopTabItem : NSObject
 
 @end
-
-@interface Bee_UITopTab : UIView <BeeUIScrollViewDataSource>
+ 
+@interface Bee_UITopTab : UIView <UIScrollViewDelegate>
 {
-    BeeUIScrollView  *     _container;
+    UIScrollView  *     _container;
+    
+    CGFloat                 _itemWidth;
 }
 
+
+AS_SIGNAL(TOP_TAB_ITEM_CHANGE)
 
 /**
  * 背景

@@ -16,6 +16,16 @@
 
 
 
+// BeeUIBoard signal goes here
+- (void)handleUISignal_Bee_UITopTab:(BeeUISignal *)signal
+{
+	[super handleUISignal:signal];
+	
+    if ( [signal is:Bee_UITopTab.TOP_TAB_ITEM_CHANGE] )
+	{
+        NSLog(@"ddd");
+    }
+}
 
 // BeeUIBoard signal goes here
 - (void)handleUISignal_BeeUIBoard:(BeeUISignal *)signal
