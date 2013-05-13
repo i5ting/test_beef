@@ -9,6 +9,13 @@
 #import <UIKit/UIKit.h>
 
 
+#pragma mark - config
+
+//#define TOP_TAB_ITEM_CHANGE_ANIMATED 1
+#define TOP_TAB_ITEM_CHANGE_ANIMATED 0
+
+
+
 @interface Bee_UITopTabItem : NSObject
 
 @end

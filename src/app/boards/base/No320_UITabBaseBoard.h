@@ -21,4 +21,18 @@
 
 - (void)addTopTabView;
 
+
+
+
+- (NSMutableArray *)get_top_tab_data_source;
+
+
+/**
+ * 内部日志
+ */
+-(void)log:(NSString *)str;
+
+
+
+
 @end

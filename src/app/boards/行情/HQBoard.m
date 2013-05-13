@@ -1,18 +1,33 @@
 //
-//  SZBoard.m
+//  HQBoard.m
 //  sinafinance
 //
 //  Created by sang on 5/9/13.
 //
 //
 
-#import "SZBoard.h"
+#import "HQBoard.h"
 
-@interface SZBoard ()
+@interface HQBoard ()
 
 @end
 
-@implementation SZBoard
+@implementation HQBoard
+
+#pragma mark - Signals
+
+// BeeUIBoard signal goes here
+- (void)handleUISignal_Bee_UITopTab:(BeeUISignal *)signal
+{
+	[super handleUISignal:signal];
+	
+    if ( [signal is:Bee_UITopTab.TOP_TAB_ITEM_CHANGE] )
+	{
+        int i = [(NSNumber *)[signal object] intValue];
+
+        [self log:[NSString stringWithFormat:@"Bee_UITopTab click item : %d",i]];
+    }
+}
 
 // BeeUIBoard signal goes here
 - (void)handleUISignal_BeeUIBoard:(BeeUISignal *)signal
@@ -22,8 +37,9 @@
 	if ( [signal is:BeeUIBoard.CREATE_VIEWS] )
 	{
 		// 界面创建
+        self.view.backgroundImage = __BASE_BOARD_IMAGE( @"main_board_bg" );
         //        [self hideNavigationBarAnimated:NO];
-		[self setTitleString:@"设置"];
+		[self setTitleString:@"行情"];
 		[self showNavigationBarAnimated:NO];
         
         CGRect innerFrame;
@@ -35,7 +51,7 @@
 		_innerView = [[Lesson2View1 alloc] initWithFrame:innerFrame];
 		_innerView.backgroundColor = [UIColor clearColor];
 		[self.view addSubview:_innerView];
-        
+        [self addTopTabView];
         
 	}
 	else if ( [signal is:BeeUIBoard.DELETE_VIEWS] )
@@ -70,6 +86,13 @@
 	{
 		// 已经隐藏
 	}
+}
+
+
+#pragma mark - Override
+- (NSMutableArray *)get_top_tab_data_source
+{
+    return [NSMutableArray arrayWithObjects:@"沪深",@"港股",@"美股",@"环球",@"中概股", nil];
 }
 
 @end

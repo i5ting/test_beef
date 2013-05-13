@@ -1,31 +1,18 @@
 //
-//  ZXBoard.m
+//  SZBoard.m
 //  sinafinance
 //
 //  Created by sang on 5/9/13.
 //
 //
 
-#import "ZXBoard.h"
+#import "SZBoard.h"
 
-@interface ZXBoard ()
+@interface SZBoard ()
 
 @end
 
-@implementation ZXBoard
-
-
-
-// BeeUIBoard signal goes here
-- (void)handleUISignal_Bee_UITopTab:(BeeUISignal *)signal
-{
-	[super handleUISignal:signal];
-	
-    if ( [signal is:Bee_UITopTab.TOP_TAB_ITEM_CHANGE] )
-	{
-        NSLog(@"ddd");
-    }
-}
+@implementation SZBoard
 
 // BeeUIBoard signal goes here
 - (void)handleUISignal_BeeUIBoard:(BeeUISignal *)signal
@@ -35,8 +22,10 @@
 	if ( [signal is:BeeUIBoard.CREATE_VIEWS] )
 	{
 		// 界面创建
+        
+        
         //        [self hideNavigationBarAnimated:NO];
-		[self setTitleString:@"我的自选"];
+		[self setTitleString:@"设置"];
 		[self showNavigationBarAnimated:NO];
         
         CGRect innerFrame;
@@ -49,8 +38,7 @@
 		_innerView.backgroundColor = [UIColor clearColor];
 		[self.view addSubview:_innerView];
         
-        [self addTopTabView];
-
+        
 	}
 	else if ( [signal is:BeeUIBoard.DELETE_VIEWS] )
 	{
@@ -85,7 +73,5 @@
 		// 已经隐藏
 	}
 }
-
-
 
 @end

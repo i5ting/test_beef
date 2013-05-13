@@ -235,13 +235,17 @@
 		5D47FD7B1738E23700A4EB45 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D47FD7A1738E23700A4EB45 /* libsqlite3.0.dylib */; };
 		5D47FD821738EB2C00A4EB45 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5D47FD811738EB2C00A4EB45 /* README.md */; };
 		5D47FD991738EC1700A4EB45 /* sina_finance_ios.db in Resources */ = {isa = PBXBuildFile; fileRef = 5D47FD931738EC1700A4EB45 /* sina_finance_ios.db */; };
-		5D6DDA92173B493E00329AE9 /* No320_UITabBaseBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6DDA91173B493E00329AE9 /* No320_UITabBaseBoard.m */; };
-		5D6DDA96173B4A5B00329AE9 /* ZXBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6DDA95173B4A5B00329AE9 /* ZXBoard.m */; };
-		5D6DDA99173B4A7500329AE9 /* XGBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6DDA98173B4A7500329AE9 /* XGBoard.m */; };
-		5D6DDA9C173B4A8500329AE9 /* SZBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6DDA9B173B4A8500329AE9 /* SZBoard.m */; };
-		5D6DDA9F173B4AA800329AE9 /* HQBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6DDA9E173B4AA800329AE9 /* HQBoard.m */; };
 		5D6DDAA1173B4D0400329AE9 /* ui_tab_base_board.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5D6DDAA0173B4D0400329AE9 /* ui_tab_base_board.bundle */; };
 		5D6DDAC1173B7A2A00329AE9 /* Bee_UITopTab.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6DDAC0173B7A2A00329AE9 /* Bee_UITopTab.m */; };
+		5D9B468717408DD3005FD388 /* HQBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9B467E17408DD3005FD388 /* HQBoard.m */; };
+		5D9B468817408DD3005FD388 /* SZBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9B468117408DD3005FD388 /* SZBoard.m */; };
+		5D9B468917408DD3005FD388 /* No320_UITabBaseBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9B468417408DD3005FD388 /* No320_UITabBaseBoard.m */; };
+		5D9B469017408F7B005FD388 /* ZXBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9B468C17408F7B005FD388 /* ZXBoard.m */; };
+		5D9B469117408F7B005FD388 /* XGBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9B468F17408F7B005FD388 /* XGBoard.m */; };
+		5D9B46A01740CAEA005FD388 /* UITabItemViewBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9B469F1740CAEA005FD388 /* UITabItemViewBase.m */; };
+		5D9B46BE1740DC22005FD388 /* US_UITabItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9B46BB1740DC22005FD388 /* US_UITabItemView.m */; };
+		5D9B46BF1740DC22005FD388 /* HK_UITabItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9B46BC1740DC22005FD388 /* HK_UITabItemView.m */; };
+		5D9B46C01740DC22005FD388 /* HS_UITabItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9B46BD1740DC22005FD388 /* HS_UITabItemView.m */; };
 		5DCB35EF17390CC600245AFF /* finiance_tab.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5DCB35EE17390CC600245AFF /* finiance_tab.bundle */; };
 		5DCB360617390F2700245AFF /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB360417390F2700245AFF /* RootViewController.m */; };
 		5DCB360717390F2700245AFF /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DCB360517390F2700245AFF /* RootViewController.xib */; };
@@ -700,20 +704,30 @@
 		5D47FD7A1738E23700A4EB45 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = /usr/lib/libsqlite3.0.dylib; sourceTree = "<absolute>"; };
 		5D47FD811738EB2C00A4EB45 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		5D47FD931738EC1700A4EB45 /* sina_finance_ios.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sina_finance_ios.db; sourceTree = "<group>"; };
-		5D6DDA90173B493E00329AE9 /* No320_UITabBaseBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = No320_UITabBaseBoard.h; sourceTree = "<group>"; };
-		5D6DDA91173B493E00329AE9 /* No320_UITabBaseBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = No320_UITabBaseBoard.m; sourceTree = "<group>"; };
-		5D6DDA94173B4A5A00329AE9 /* ZXBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXBoard.h; sourceTree = "<group>"; };
-		5D6DDA95173B4A5B00329AE9 /* ZXBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXBoard.m; sourceTree = "<group>"; };
-		5D6DDA97173B4A7500329AE9 /* XGBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGBoard.h; sourceTree = "<group>"; };
-		5D6DDA98173B4A7500329AE9 /* XGBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGBoard.m; sourceTree = "<group>"; };
-		5D6DDA9A173B4A8500329AE9 /* SZBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SZBoard.h; sourceTree = "<group>"; };
-		5D6DDA9B173B4A8500329AE9 /* SZBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SZBoard.m; sourceTree = "<group>"; };
-		5D6DDA9D173B4AA800329AE9 /* HQBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQBoard.h; sourceTree = "<group>"; };
-		5D6DDA9E173B4AA800329AE9 /* HQBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQBoard.m; sourceTree = "<group>"; };
 		5D6DDAA0173B4D0400329AE9 /* ui_tab_base_board.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ui_tab_base_board.bundle; sourceTree = "<group>"; };
 		5D6DDABF173B7A2A00329AE9 /* Bee_UITopTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bee_UITopTab.h; sourceTree = "<group>"; };
 		5D6DDAC0173B7A2A00329AE9 /* Bee_UITopTab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bee_UITopTab.m; sourceTree = "<group>"; };
 		5D6DDAC2173B8EE200329AE9 /* mybundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mybundle.h; sourceTree = "<group>"; };
+		5D9B467D17408DD3005FD388 /* HQBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQBoard.h; sourceTree = "<group>"; };
+		5D9B467E17408DD3005FD388 /* HQBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQBoard.m; sourceTree = "<group>"; };
+		5D9B468017408DD3005FD388 /* SZBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SZBoard.h; sourceTree = "<group>"; };
+		5D9B468117408DD3005FD388 /* SZBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SZBoard.m; sourceTree = "<group>"; };
+		5D9B468317408DD3005FD388 /* No320_UITabBaseBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = No320_UITabBaseBoard.h; sourceTree = "<group>"; };
+		5D9B468417408DD3005FD388 /* No320_UITabBaseBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = No320_UITabBaseBoard.m; sourceTree = "<group>"; };
+		5D9B468B17408F7B005FD388 /* ZXBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXBoard.h; sourceTree = "<group>"; };
+		5D9B468C17408F7B005FD388 /* ZXBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXBoard.m; sourceTree = "<group>"; };
+		5D9B468E17408F7B005FD388 /* XGBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGBoard.h; sourceTree = "<group>"; };
+		5D9B468F17408F7B005FD388 /* XGBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGBoard.m; sourceTree = "<group>"; };
+		5D9B46951740B19E005FD388 /* frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = frame.h; sourceTree = "<group>"; };
+		5D9B469E1740CAEA005FD388 /* UITabItemViewBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITabItemViewBase.h; sourceTree = "<group>"; };
+		5D9B469F1740CAEA005FD388 /* UITabItemViewBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITabItemViewBase.m; sourceTree = "<group>"; };
+		5D9B46B71740DC22005FD388 /* ZX_UITabItemBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZX_UITabItemBoard.h; sourceTree = "<group>"; };
+		5D9B46B81740DC22005FD388 /* HK_UITabItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HK_UITabItemView.h; sourceTree = "<group>"; };
+		5D9B46B91740DC22005FD388 /* HS_UITabItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HS_UITabItemView.h; sourceTree = "<group>"; };
+		5D9B46BA1740DC22005FD388 /* US_UITabItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US_UITabItemView.h; sourceTree = "<group>"; };
+		5D9B46BB1740DC22005FD388 /* US_UITabItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US_UITabItemView.m; sourceTree = "<group>"; };
+		5D9B46BC1740DC22005FD388 /* HK_UITabItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HK_UITabItemView.m; sourceTree = "<group>"; };
+		5D9B46BD1740DC22005FD388 /* HS_UITabItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HS_UITabItemView.m; sourceTree = "<group>"; };
 		5DCB35EE17390CC600245AFF /* finiance_tab.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = finiance_tab.bundle; sourceTree = "<group>"; };
 		5DCB360317390F2700245AFF /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		5DCB360417390F2700245AFF /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
@@ -771,18 +785,13 @@
 		2504A28E17395D40009D8C54 /* boards */ = {
 			isa = PBXGroup;
 			children = (
+				5D9B468A17408F7B005FD388 /* 自选 */,
+				5D9B468D17408F7B005FD388 /* 选股 */,
+				5D9B467C17408DD3005FD388 /* 行情 */,
+				5D9B467F17408DD3005FD388 /* 设置 */,
+				5D9B468217408DD3005FD388 /* base */,
 				2504A28F17395D72009D8C54 /* TestBoard.h */,
 				2504A29017395D72009D8C54 /* TestBoard.m */,
-				5D6DDA90173B493E00329AE9 /* No320_UITabBaseBoard.h */,
-				5D6DDA91173B493E00329AE9 /* No320_UITabBaseBoard.m */,
-				5D6DDA94173B4A5A00329AE9 /* ZXBoard.h */,
-				5D6DDA95173B4A5B00329AE9 /* ZXBoard.m */,
-				5D6DDA97173B4A7500329AE9 /* XGBoard.h */,
-				5D6DDA98173B4A7500329AE9 /* XGBoard.m */,
-				5D6DDA9A173B4A8500329AE9 /* SZBoard.h */,
-				5D6DDA9B173B4A8500329AE9 /* SZBoard.m */,
-				5D6DDA9D173B4AA800329AE9 /* HQBoard.h */,
-				5D6DDA9E173B4AA800329AE9 /* HQBoard.m */,
 			);
 			path = boards;
 			sourceTree = "<group>";
@@ -1693,6 +1702,7 @@
 		5D47FD8B1738EC1700A4EB45 /* helpers */ = {
 			isa = PBXGroup;
 			children = (
+				5D9B46951740B19E005FD388 /* frame.h */,
 				5D6DDAC2173B8EE200329AE9 /* mybundle.h */,
 			);
 			path = helpers;
@@ -1708,6 +1718,8 @@
 		5D47FD8D1738EC1700A4EB45 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				5D9B469C1740CA3B005FD388 /* base */,
+				5D9B469D1740CA3B005FD388 /* UITabItemBoard */,
 				5D6DDABF173B7A2A00329AE9 /* Bee_UITopTab.h */,
 				5D6DDAC0173B7A2A00329AE9 /* Bee_UITopTab.m */,
 			);
@@ -1786,6 +1798,82 @@
 			children = (
 			);
 			path = test;
+			sourceTree = "<group>";
+		};
+		5D9B467C17408DD3005FD388 /* 行情 */ = {
+			isa = PBXGroup;
+			children = (
+				5D9B467D17408DD3005FD388 /* HQBoard.h */,
+				5D9B467E17408DD3005FD388 /* HQBoard.m */,
+			);
+			path = "行情";
+			sourceTree = "<group>";
+		};
+		5D9B467F17408DD3005FD388 /* 设置 */ = {
+			isa = PBXGroup;
+			children = (
+				5D9B468017408DD3005FD388 /* SZBoard.h */,
+				5D9B468117408DD3005FD388 /* SZBoard.m */,
+			);
+			path = "设置";
+			sourceTree = "<group>";
+		};
+		5D9B468217408DD3005FD388 /* base */ = {
+			isa = PBXGroup;
+			children = (
+				5D9B468317408DD3005FD388 /* No320_UITabBaseBoard.h */,
+				5D9B468417408DD3005FD388 /* No320_UITabBaseBoard.m */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
+		5D9B468A17408F7B005FD388 /* 自选 */ = {
+			isa = PBXGroup;
+			children = (
+				5D9B468B17408F7B005FD388 /* ZXBoard.h */,
+				5D9B468C17408F7B005FD388 /* ZXBoard.m */,
+			);
+			path = "自选";
+			sourceTree = "<group>";
+		};
+		5D9B468D17408F7B005FD388 /* 选股 */ = {
+			isa = PBXGroup;
+			children = (
+				5D9B468E17408F7B005FD388 /* XGBoard.h */,
+				5D9B468F17408F7B005FD388 /* XGBoard.m */,
+			);
+			path = "选股";
+			sourceTree = "<group>";
+		};
+		5D9B469C1740CA3B005FD388 /* base */ = {
+			isa = PBXGroup;
+			children = (
+				5D9B469E1740CAEA005FD388 /* UITabItemViewBase.h */,
+				5D9B469F1740CAEA005FD388 /* UITabItemViewBase.m */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
+		5D9B469D1740CA3B005FD388 /* UITabItemBoard */ = {
+			isa = PBXGroup;
+			children = (
+				5D9B46AA1740D5D4005FD388 /* 自选 */,
+			);
+			path = UITabItemBoard;
+			sourceTree = "<group>";
+		};
+		5D9B46AA1740D5D4005FD388 /* 自选 */ = {
+			isa = PBXGroup;
+			children = (
+				5D9B46B71740DC22005FD388 /* ZX_UITabItemBoard.h */,
+				5D9B46B81740DC22005FD388 /* HK_UITabItemView.h */,
+				5D9B46BC1740DC22005FD388 /* HK_UITabItemView.m */,
+				5D9B46BA1740DC22005FD388 /* US_UITabItemView.h */,
+				5D9B46BB1740DC22005FD388 /* US_UITabItemView.m */,
+				5D9B46B91740DC22005FD388 /* HS_UITabItemView.h */,
+				5D9B46BD1740DC22005FD388 /* HS_UITabItemView.m */,
+			);
+			path = "自选";
 			sourceTree = "<group>";
 		};
 		5DCB35ED17390C8800245AFF /* bundles */ = {
@@ -2109,12 +2197,16 @@
 				5DCB38AC173A62B800245AFF /* Bee_CustomTabBoard.m in Sources */,
 				5DCB38AD173A62B800245AFF /* Bee_TabbarItem.m in Sources */,
 				5DCB38AE173A62B800245AFF /* no320_bee_tab_board.m in Sources */,
-				5D6DDA92173B493E00329AE9 /* No320_UITabBaseBoard.m in Sources */,
-				5D6DDA96173B4A5B00329AE9 /* ZXBoard.m in Sources */,
-				5D6DDA99173B4A7500329AE9 /* XGBoard.m in Sources */,
-				5D6DDA9C173B4A8500329AE9 /* SZBoard.m in Sources */,
-				5D6DDA9F173B4AA800329AE9 /* HQBoard.m in Sources */,
 				5D6DDAC1173B7A2A00329AE9 /* Bee_UITopTab.m in Sources */,
+				5D9B468717408DD3005FD388 /* HQBoard.m in Sources */,
+				5D9B468817408DD3005FD388 /* SZBoard.m in Sources */,
+				5D9B468917408DD3005FD388 /* No320_UITabBaseBoard.m in Sources */,
+				5D9B469017408F7B005FD388 /* ZXBoard.m in Sources */,
+				5D9B469117408F7B005FD388 /* XGBoard.m in Sources */,
+				5D9B46A01740CAEA005FD388 /* UITabItemViewBase.m in Sources */,
+				5D9B46BE1740DC22005FD388 /* US_UITabItemView.m in Sources */,
+				5D9B46BF1740DC22005FD388 /* HK_UITabItemView.m in Sources */,
+				5D9B46C01740DC22005FD388 /* HS_UITabItemView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2165,6 +2257,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer: lei shao (E972HLV37J)";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = /usr/lib/libxml2.dylib;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -2175,6 +2268,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "29D86827-2303-49F1-BA43-31AD7B93FEB1";
 				USER_HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -2184,6 +2278,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer: lei shao (E972HLV37J)";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = /usr/lib/libxml2.dylib;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2193,6 +2288,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "29D86827-2303-49F1-BA43-31AD7B93FEB1";
 				USER_HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;

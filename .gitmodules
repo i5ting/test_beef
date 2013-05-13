@@ -4,3 +4,6 @@
 [submodule "vendor/bee_abstract_board"]
 	path = vendor/bee_abstract_board
 	url = https://github.com/i5ting/bee_abstract_board.git
+[submodule "vendor/no320_list_view"]
+	path = vendor/no320_list_view
+	url = https://github.com/i5ting/no320_list_view.git

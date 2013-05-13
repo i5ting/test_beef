@@ -1,18 +1,33 @@
 //
-//  HQBoard.m
+//  XGBoard.m
 //  sinafinance
 //
 //  Created by sang on 5/9/13.
 //
 //
 
-#import "HQBoard.h"
+#import "XGBoard.h"
 
-@interface HQBoard ()
+@interface XGBoard ()
 
 @end
 
-@implementation HQBoard
+@implementation XGBoard
+
+#pragma mark - Signals
+
+// BeeUIBoard signal goes here
+- (void)handleUISignal_Bee_UITopTab:(BeeUISignal *)signal
+{
+	[super handleUISignal:signal];
+	
+    if ( [signal is:Bee_UITopTab.TOP_TAB_ITEM_CHANGE] )
+	{
+        int i = [(NSNumber *)[signal object] intValue];
+        
+        [self log:[NSString stringWithFormat:@"Bee_UITopTab click item : %d",i]];
+    }
+}
 
 // BeeUIBoard signal goes here
 - (void)handleUISignal_BeeUIBoard:(BeeUISignal *)signal
@@ -22,8 +37,9 @@
 	if ( [signal is:BeeUIBoard.CREATE_VIEWS] )
 	{
 		// 界面创建
+        self.view.backgroundImage = __BASE_BOARD_IMAGE( @"main_board_bg" );
         //        [self hideNavigationBarAnimated:NO];
-		[self setTitleString:@"行情"];
+		[self setTitleString:@"选股"];
 		[self showNavigationBarAnimated:NO];
         
         CGRect innerFrame;
@@ -36,6 +52,7 @@
 		_innerView.backgroundColor = [UIColor clearColor];
 		[self.view addSubview:_innerView];
         
+        [self addTopTabView];
         
 	}
 	else if ( [signal is:BeeUIBoard.DELETE_VIEWS] )
@@ -70,6 +87,12 @@
 	{
 		// 已经隐藏
 	}
+}
+
+#pragma mark - Override
+- (NSMutableArray *)get_top_tab_data_source
+{
+    return [NSMutableArray arrayWithObjects:@"选股",@"要闻",@"股吧",@"微博", nil];
 }
 
 @end
