@@ -19,7 +19,7 @@
         self.delegate = self;
     }
     
-    self.GET();
+//    self.GET();
     return self;
 }
 
@@ -47,38 +47,39 @@
 
 -(void)init_table_data
 {
-    [[BaiduApi2 sharedBaiduApi2] getPath:@"search" parameters:[NSDictionary dictionaryWithObject:[NSString stringWithFormat:@"%d",1] forKey:@"pageno"]  success:^(AFHTTPRequestOperation *operation, id JSON) {
-        
-        NSArray *f = [JSON objectFromJSONData];
-        [self init_table_data_callback:f];
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        
-    }];
+//    [[BaiduApi2 sharedBaiduApi2] getPath:@"search" parameters:[NSDictionary dictionaryWithObject:[NSString stringWithFormat:@"%d",1] forKey:@"pageno"]  success:^(AFHTTPRequestOperation *operation, id JSON) {
+//        
+//        NSArray *f = [JSON objectFromJSONData];
+//        [self init_table_data_callback:f];
+//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+//        
+//    }];
 }
 
 -(void)init_table_data_callback:(NSMutableArray *)r
 {
     [super init_table_data_callback:r];
+//    [self sendUISignal:<#(NSString *)#>]
 }
 
 -(void)reload_next_page:(int)cur_page_number
 {
     
     
-    [[BaiduApi2 sharedBaiduApi2] getPath:@"search" parameters:[NSDictionary dictionaryWithObject:[NSString stringWithFormat:@"%d",cur_page_number] forKey:@"pageno"]  success:^(AFHTTPRequestOperation *operation, id JSON) {
-        
-        NSMutableArray *f = [NSMutableArray arrayWithArray:[JSON objectFromJSONData]];
-        //        _result_arr = f;
-        if (cur_page_number==2) {
-            [f removeLastObject];
-            [f removeLastObject];
-        }
-        [self reload_next_page_callback:f];
-        
-        _reloading = NO;
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        
-    }];
+//    [[BaiduApi2 sharedBaiduApi2] getPath:@"search" parameters:[NSDictionary dictionaryWithObject:[NSString stringWithFormat:@"%d",cur_page_number] forKey:@"pageno"]  success:^(AFHTTPRequestOperation *operation, id JSON) {
+//        
+//        NSMutableArray *f = [NSMutableArray arrayWithArray:[JSON objectFromJSONData]];
+//        //        _result_arr = f;
+//        if (cur_page_number==2) {
+//            [f removeLastObject];
+//            [f removeLastObject];
+//        }
+//        [self reload_next_page_callback:f];
+//        
+//        _reloading = NO;
+//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+//        
+//    }];
 }
 
 -(void)reload_next_page_callback:(NSMutableArray *)r

@@ -253,6 +253,7 @@
 		5D9B46D01740F28B005FD388 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5D9B46CA1740F28B005FD388 /* README.md */; };
 		5D9B46D11740F28B005FD388 /* tableview.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5D9B46CB1740F28B005FD388 /* tableview.bundle */; };
 		5D9B46D51740F611005FD388 /* TestPullViewControllerWithModeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9B46D41740F611005FD388 /* TestPullViewControllerWithModeViewController.m */; };
+		5D9B46DD1742134E005FD388 /* ZXBoard_Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9B46DC1742134E005FD388 /* ZXBoard_Message.m */; };
 		5DCB35EF17390CC600245AFF /* finiance_tab.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5DCB35EE17390CC600245AFF /* finiance_tab.bundle */; };
 		5DCB360617390F2700245AFF /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB360417390F2700245AFF /* RootViewController.m */; };
 		5DCB360717390F2700245AFF /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DCB360517390F2700245AFF /* RootViewController.xib */; };
@@ -747,6 +748,8 @@
 		5D9B46CB1740F28B005FD388 /* tableview.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = tableview.bundle; sourceTree = "<group>"; };
 		5D9B46D31740F611005FD388 /* TestPullViewControllerWithModeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestPullViewControllerWithModeViewController.h; sourceTree = "<group>"; };
 		5D9B46D41740F611005FD388 /* TestPullViewControllerWithModeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestPullViewControllerWithModeViewController.m; sourceTree = "<group>"; };
+		5D9B46DB1742134E005FD388 /* ZXBoard_Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXBoard_Message.h; sourceTree = "<group>"; };
+		5D9B46DC1742134E005FD388 /* ZXBoard_Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXBoard_Message.m; sourceTree = "<group>"; };
 		5DCB35EE17390CC600245AFF /* finiance_tab.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = finiance_tab.bundle; sourceTree = "<group>"; };
 		5DCB360317390F2700245AFF /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		5DCB360417390F2700245AFF /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
@@ -1668,6 +1671,7 @@
 				5D47FD861738EC1700A4EB45 /* apis */,
 				5D47FD871738EC1700A4EB45 /* assets */,
 				2504A28E17395D40009D8C54 /* boards */,
+				5D9B46D617420EE4005FD388 /* messages */,
 				5D47FD8D1738EC1700A4EB45 /* views */,
 				5D47FD8A1738EC1700A4EB45 /* controllers */,
 				5D47FD8B1738EC1700A4EB45 /* helpers */,
@@ -1921,6 +1925,47 @@
 				5D9B46D41740F611005FD388 /* TestPullViewControllerWithModeViewController.m */,
 			);
 			path = table;
+			sourceTree = "<group>";
+		};
+		5D9B46D617420EE4005FD388 /* messages */ = {
+			isa = PBXGroup;
+			children = (
+				5D9B46D71742103B005FD388 /* 行情 */,
+				5D9B46D81742103B005FD388 /* 设置 */,
+				5D9B46D91742103B005FD388 /* 选股 */,
+				5D9B46DA1742103B005FD388 /* 自选 */,
+			);
+			path = messages;
+			sourceTree = "<group>";
+		};
+		5D9B46D71742103B005FD388 /* 行情 */ = {
+			isa = PBXGroup;
+			children = (
+				5D9B46DB1742134E005FD388 /* ZXBoard_Message.h */,
+				5D9B46DC1742134E005FD388 /* ZXBoard_Message.m */,
+			);
+			path = "行情";
+			sourceTree = "<group>";
+		};
+		5D9B46D81742103B005FD388 /* 设置 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "设置";
+			sourceTree = "<group>";
+		};
+		5D9B46D91742103B005FD388 /* 选股 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "选股";
+			sourceTree = "<group>";
+		};
+		5D9B46DA1742103B005FD388 /* 自选 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "自选";
 			sourceTree = "<group>";
 		};
 		5DCB35ED17390C8800245AFF /* bundles */ = {
@@ -2261,6 +2306,7 @@
 				5D9B46CE1740F28B005FD388 /* ListViewController.m in Sources */,
 				5D9B46CF1740F28B005FD388 /* PageListViewController.m in Sources */,
 				5D9B46D51740F611005FD388 /* TestPullViewControllerWithModeViewController.m in Sources */,
+				5D9B46DD1742134E005FD388 /* ZXBoard_Message.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

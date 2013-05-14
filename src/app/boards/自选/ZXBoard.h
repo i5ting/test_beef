@@ -7,7 +7,7 @@
 //
 
 #import "No320_UITabBaseBoard.h"
-
+#import "ZXBoard_Message.h"
 #import "ZX_UITabItemBoard.h"
 
 typedef enum {

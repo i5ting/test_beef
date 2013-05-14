@@ -116,9 +116,18 @@
         
         [self addTopTabView];
         
-  
-        
+        if ( [self sendingMessage:ZXBoard_Message.REMOTE] )
+		{
+			[self cancelMessage:ZXBoard_Message.REMOTE];
+		}
+		else
+		{
+			[[self sendMessage:ZXBoard_Message.REMOTE timeoutSeconds:10.0f] input:
+			 @"url", @"http://top.baidu.com/news/pagination?pageno=1", nil];
+		}
 
+        
+        self.navigationController.navigationItem.leftBarButtonItem.title = @"ddd";
 	}
 	else if ( [signal is:BeeUIBoard.DELETE_VIEWS] )
 	{
@@ -154,7 +163,73 @@
 	}
 }
 
+#pragma mark - Messages
+- (void)handleMessage:(BeeMessage *)msg
+{
+	[super handleMessage:msg];
+}
 
+- (void)handleMessage_ZXBoard_Message:(BeeMessage *)msg
+{
+	[super handleMessage:msg];
+    
+	if ( [msg is:ZXBoard_Message.LOCAL] )
+	{
+		if ( msg.sending )
+		{
+//			_button1.stateNormal.title = @"Cancel";
+		}
+		else
+		{
+//			_button1.stateNormal.title = @"Local message";
+		}
+		
+		if ( msg.succeed )
+		{
+			[BeeUIAlertView showMessage:[msg.output description] cancelTitle:@"OK"];
+		}
+	}
+	else if ( [msg is:ZXBoard_Message.REMOTE] )
+	{
+		if ( msg.sending )
+		{
+//			_button2.stateNormal.title = @"Cancel";
+		}
+		else
+		{
+//			_button2.stateNormal.title = @"Remote message";
+		}
+		
+		if ( msg.sending )
+		{
+			// TODO: 当发送
+			
+			self.title = @"Communicating...";
+		}
+		else if ( msg.failed )
+		{
+			// TODO: 当失败
+			
+			self.title = @"Failed";
+		}
+		else if ( msg.succeed )
+		{
+			// TODO: 当成功
+			CC(msg.responseJSON);
+			self.title = @"Succeed";
+            
+            //reload table view
+			
+			[BeeUIAlertView showMessage:[msg.output description] cancelTitle:@"OK"];
+		}
+		else if ( msg.cancelled )
+		{
+			// TODO: 当取消
+			
+			self.title = @"Cancelled";
+		}
+	}
+}
 
 #pragma mark - Override 
 - (NSMutableArray *)get_top_tab_data_source
