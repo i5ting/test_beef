@@ -18,6 +18,8 @@
     if (self = [super init_with_frame:frame mode:mode]) {
         self.delegate = self;
     }
+    
+    self.GET();
     return self;
 }
 
