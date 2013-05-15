@@ -4,8 +4,8 @@
 
 #import <Availability.h>
 
-#ifndef __IPHONE_3_0
-#warning "This project uses features only available in iOS SDK 3.0 and later."
+#ifndef __IPHONE_4_0
+#warning "This project uses features only available in iOS SDK 4.0 and later."
 #endif
 
 #ifdef __OBJC__
@@ -23,3 +23,28 @@
 
 #import "mybundle.h"
 #import "frame.h"
+
+
+//应用名称：
+//财经客户端2
+//
+//应用类型：
+//普通应用  -  客户端
+//
+//App Key：
+//1783495563
+//
+//App Secret：
+//a555e1c58dd403ede3290a82849afa4a
+
+#import "WeiboSDK.h"
+
+#define kAppKey         @"2310520141"
+#define kRedirectURI    @"http://finance.sina.com.cn"
+
+//
+//#define kAppKey         @"1783495563"
+//#define kRedirectURI    @"http://finance.sina.com.cn"
+//com.sina.weibo.SNWeiboSDKDemo
+
+ 

@@ -116,18 +116,43 @@
         
         [self addTopTabView];
         
-        if ( [self sendingMessage:ZXBoard_Message.REMOTE] )
-		{
-			[self cancelMessage:ZXBoard_Message.REMOTE];
-		}
-		else
-		{
-			[[self sendMessage:ZXBoard_Message.REMOTE timeoutSeconds:10.0f] input:
-			 @"url", @"http://top.baidu.com/news/pagination?pageno=1", nil];
-		}
+//        if ( [self sendingMessage:ZXBoard_Message.REMOTE] )
+//		{
+//			[self cancelMessage:ZXBoard_Message.REMOTE];
+//		}
+//		else
+//		{
+//			[[self sendMessage:ZXBoard_Message.REMOTE timeoutSeconds:10.0f] input:
+//			 @"url", @"http://top.baidu.com/news/pagination?pageno=1", nil];
+//		}
 
         
         self.navigationController.navigationItem.leftBarButtonItem.title = @"ddd";
+        UIButton *btn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        /**
+         *  设置frame只能控制按钮的大小
+         */
+        btn.frame= CGRectMake(0, 0, 40, 44);
+        [btn addTarget:self action:@selector(buttonClicked) forControlEvents:UIControlEventTouchUpInside];
+        UIBarButtonItem *btn_right = [[UIBarButtonItem alloc] initWithCustomView:btn];
+        UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]
+                                           initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
+                                           target:nil action:nil];
+        /**
+         *  width为负数时，相当于btn向右移动width数值个像素，由于按钮本身和边界间距为5pix，所以width设为-5时，间距正好调整
+         *  为0；width为正数时，正好相反，相当于往左移动width数值个像素
+         */
+        negativeSpacer.width = -5;
+        self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:negativeSpacer, btn_right, nil];
+        [btn_right release];
+        
+        
+        UIButton *ssoButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        [ssoButton setTitle:@"请求微博认证（SSO授权）" forState:UIControlStateNormal];
+        [ssoButton addTarget:self action:@selector(ssoButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+        ssoButton.frame = CGRectMake(20, 250, 280, 50);
+        [self.view addSubview:ssoButton];
+
 	}
 	else if ( [signal is:BeeUIBoard.DELETE_VIEWS] )
 	{
@@ -222,6 +247,7 @@
 			
 			[BeeUIAlertView showMessage:[msg.output description] cancelTitle:@"OK"];
 		}
+        
 		else if ( msg.cancelled )
 		{
 			// TODO: 当取消
@@ -236,5 +262,19 @@
 {
     return [NSMutableArray arrayWithObjects:@"沪深",@"港股",@"美股", nil];
 }
+
+
+- (void)ssoButtonPressed
+{
+    WBAuthorizeRequest *request = [WBAuthorizeRequest request];
+    request.redirectURI = kRedirectURI;
+    request.scope = @"email,direct_messages_write";
+    request.userInfo = @{@"SSO_From": @"ZXBoard",
+    @"Other_Info_1": [NSNumber numberWithInt:123],
+    @"Other_Info_2": @[@"obj1", @"obj2"],
+    @"Other_Info_3": @{@"key1": @"obj1", @"key2": @"obj2"}};
+    [WeiboSDK sendRequest:request];
+}
+
 
 @end
