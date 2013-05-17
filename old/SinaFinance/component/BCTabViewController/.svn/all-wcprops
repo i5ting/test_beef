@@ -1,0 +1,149 @@
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/netdev/!svn/ver/295400/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/BCTabViewController
+END
+BCNavigationBar.h
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/netdev/!svn/ver/247114/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/BCTabViewController/BCNavigationBar.h
+END
+UIView+ParentLayout.h
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/netdev/!svn/ver/247114/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/BCTabViewController/UIView+ParentLayout.h
+END
+BCTabBarView.h
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/netdev/!svn/ver/247114/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/BCTabViewController/BCTabBarView.h
+END
+BCNavigationBar.m
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/netdev/!svn/ver/247114/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/BCTabViewController/BCNavigationBar.m
+END
+BCSearchBar.h
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/netdev/!svn/ver/247114/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/BCTabViewController/BCSearchBar.h
+END
+UIView+ParentLayout.m
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/netdev/!svn/ver/253048/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/BCTabViewController/UIView+ParentLayout.m
+END
+BCTabBar.h
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/netdev/!svn/ver/264946/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/BCTabViewController/BCTabBar.h
+END
+BCTabBarView.m
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/netdev/!svn/ver/247114/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/BCTabViewController/BCTabBarView.m
+END
+BCSearchBar.m
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/netdev/!svn/ver/247114/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/BCTabViewController/BCSearchBar.m
+END
+BCTabBarController.h
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/netdev/!svn/ver/266737/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/BCTabViewController/BCTabBarController.h
+END
+DataButton.h
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/netdev/!svn/ver/250377/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/BCTabViewController/DataButton.h
+END
+BCTabBar.m
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/netdev/!svn/ver/291263/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/BCTabViewController/BCTabBar.m
+END
+BCNavigationController.h
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/netdev/!svn/ver/247114/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/BCTabViewController/BCNavigationController.h
+END
+BCTabBarController.m
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/netdev/!svn/ver/291263/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/BCTabViewController/BCTabBarController.m
+END
+DataButton.m
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/netdev/!svn/ver/250377/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/BCTabViewController/DataButton.m
+END
+BCTab.h
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/netdev/!svn/ver/295400/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/BCTabViewController/BCTab.h
+END
+BCMultiTabBar.h
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/netdev/!svn/ver/260082/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/BCTabViewController/BCMultiTabBar.h
+END
+TitleView.h
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/netdev/!svn/ver/247114/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/BCTabViewController/TitleView.h
+END
+BCNavigationController.m
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/netdev/!svn/ver/286428/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/BCTabViewController/BCNavigationController.m
+END
+BCTab.m
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/netdev/!svn/ver/295400/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/BCTabViewController/BCTab.m
+END
+BCMultiTabBar.m
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/netdev/!svn/ver/307388/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/BCTabViewController/BCMultiTabBar.m
+END
+TitleView.m
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/netdev/!svn/ver/247114/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/BCTabViewController/TitleView.m
+END
+BCViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/netdev/!svn/ver/247114/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/BCTabViewController/BCViewController.h
+END
+BCViewController.m
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/netdev/!svn/ver/274631/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/BCTabViewController/BCViewController.m
+END

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/netdev/!svn/ver/244670/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/Supported/AttributedLabel
+END
+LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/netdev/!svn/ver/244670/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/Supported/AttributedLabel/LICENSE
+END
+OHAttributedLabel.h
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/netdev/!svn/ver/244670/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/Supported/AttributedLabel/OHAttributedLabel.h
+END
+NSAttributedString+Attributes.h
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/netdev/!svn/ver/244670/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/Supported/AttributedLabel/NSAttributedString+Attributes.h
+END
+OHAttributedLabel.m
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/netdev/!svn/ver/244670/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/Supported/AttributedLabel/OHAttributedLabel.m
+END
+NSAttributedString+Attributes.m
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/netdev/!svn/ver/244670/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/Supported/AttributedLabel/NSAttributedString+Attributes.m
+END

@@ -24,7 +24,7 @@
 #import "ASIDataCompressor.h"
 
 // Automatically set on build
-NSString *ASIHTTPRequestVersion = @"v1.8-95 2011-05-28";
+NSString *ASIHTTPRequestVersion = @"v1.8.1-8 2011-06-05";
 
 static NSString *defaultUserAgent = nil;
 
@@ -48,7 +48,7 @@ static NSMutableArray *sessionCookies = nil;
 const int RedirectionLimit = 5;
 
 // The default number of seconds to use for a timeout
-static NSTimeInterval defaultTimeOutSeconds = 120;
+static NSTimeInterval defaultTimeOutSeconds = 10;
 
 static void ReadStreamClientCallBack(CFReadStreamRef readStream, CFStreamEventType type, void *clientCallBackInfo) {
     [((ASIHTTPRequest*)clientCallBackInfo) handleNetworkEvent: type];
@@ -106,7 +106,6 @@ static BOOL isBandwidthThrottled = NO;
 // When YES, bandwidth will be automatically throttled when using WWAN (3G/Edge/GPRS)
 // Wifi will not be throttled
 static BOOL shouldThrottleBandwithForWWANOnly = NO;
-static BOOL forceThrottleBandwith = NO;
 #endif
 
 // Mediates access to the session cookies so requests
@@ -252,6 +251,7 @@ static NSOperationQueue *sharedQueue = nil;
 
 @implementation ASIHTTPRequest
 
+
 #pragma mark init / dealloc
 
 + (void)initialize
@@ -271,7 +271,7 @@ static NSOperationQueue *sharedQueue = nil;
 		ASIUnableToCreateRequestError = [[NSError alloc] initWithDomain:NetworkRequestErrorDomain code:ASIUnableToCreateRequestErrorType userInfo:[NSDictionary dictionaryWithObjectsAndKeys:@"Unable to create request (bad url?)",NSLocalizedDescriptionKey,nil]];
 		ASITooMuchRedirectionError = [[NSError alloc] initWithDomain:NetworkRequestErrorDomain code:ASITooMuchRedirectionErrorType userInfo:[NSDictionary dictionaryWithObjectsAndKeys:@"The request failed because it redirected too many times",NSLocalizedDescriptionKey,nil]];
 		sharedQueue = [[NSOperationQueue alloc] init];
-		[sharedQueue setMaxConcurrentOperationCount:10];
+		[sharedQueue setMaxConcurrentOperationCount:4];
 
 	}
 }
@@ -712,7 +712,7 @@ static NSOperationQueue *sharedQueue = nil;
 	
 	CFRetain(self);
     [self willChangeValueForKey:@"isCancelled"];
-    is_cancelled = YES;
+    cancelled = YES;
     [self didChangeValueForKey:@"isCancelled"];
     
 	[[self cancelledLock] unlock];
@@ -749,7 +749,7 @@ static NSOperationQueue *sharedQueue = nil;
     BOOL result;
     
 	[[self cancelledLock] lock];
-    result = is_cancelled;
+    result = cancelled;
     [[self cancelledLock] unlock];
     
     return result;
@@ -768,30 +768,17 @@ static NSOperationQueue *sharedQueue = nil;
 
 - (BOOL)isResponseCompressed
 {
-	NSString * encoding = [[self responseHeaders] objectForKey:@"Content-Encoding"];
-//	NSLog( @"encoding = %@", encoding );
+	NSString *encoding = [[self responseHeaders] objectForKey:@"Content-Encoding"];
 	return encoding && [encoding rangeOfString:@"gzip"].location != NSNotFound;
 }
 
 - (NSData *)responseData
 {	
-	if ([self isResponseCompressed] && [self shouldWaitToInflateCompressedResponses])
-	{
-		NSData * data = [ASIDataDecompressor uncompressData:[self rawResponseData] error:NULL];
-		if ( nil == data )
-		{
-			return [self rawResponseData];
-		}
-		else
-		{
-			return data;
-		}
-	}
-	else
-	{
+	if ([self isResponseCompressed] && [self shouldWaitToInflateCompressedResponses]) {
+		return [ASIDataDecompressor uncompressData:[self rawResponseData] error:NULL];
+	} else {
 		return [self rawResponseData];
 	}
-	
 	return nil;
 }
 
@@ -953,7 +940,6 @@ static NSOperationQueue *sharedQueue = nil;
 		
 		NSString *header;
 		for (header in [self requestHeaders]) {
-//			NSLog( @"%@ : %@", header, [[self requestHeaders] objectForKey:header] );
 			CFHTTPMessageSetHeaderFieldValue(request, (CFStringRef)header, (CFStringRef)[[self requestHeaders] objectForKey:header]);
 		}
 
@@ -1387,7 +1373,7 @@ static NSOperationQueue *sharedQueue = nil;
 			streamSuccessfullyOpened = YES;
 		}
 	}
-
+	
 	// Here, we'll close the stream that was previously using this connection, if there was one
 	// We've kept it open until now (when we've just opened a new stream) so that the new stream can make use of the old connection
 	// http://lists.apple.com/archives/Macnetworkprog/2006/Mar/msg00119.html
@@ -1534,10 +1520,7 @@ static NSOperationQueue *sharedQueue = nil;
 			[self setLastBytesSent:totalBytesSent];	
 			
 			// Find out how much data we've uploaded so far
-			NSNumber * number = (NSNumber *)CFReadStreamCopyProperty((CFReadStreamRef)[self readStream], kCFStreamPropertyHTTPRequestBytesWrittenCount);
-			[self setTotalBytesSent:number.unsignedLongLongValue];
-			[number release];
-
+			[self setTotalBytesSent:[NSMakeCollectable([(NSNumber *)CFReadStreamCopyProperty((CFReadStreamRef)[self readStream], kCFStreamPropertyHTTPRequestBytesWrittenCount) autorelease]) unsignedLongLongValue]];
 			if (totalBytesSent > lastBytesSent) {
 				
 				// We've uploaded more data,  reset the timeout
@@ -2008,20 +1991,22 @@ static NSOperationQueue *sharedQueue = nil;
 	if ([self error] || [self mainRequest]) {
 		return;
 	}
-	
 	if ([self isPACFileRequest]) {
 		[self reportFinished];
 	} else {
-		[self performSelectorOnMainThread:@selector(reportFinished) withObject:nil waitUntilDone:[NSThread isMainThread]];
+        if (self.finishWithThread) {
+            [self reportFinished];
+        }
+        else
+        {
+            [self performSelectorOnMainThread:@selector(reportFinished) withObject:nil waitUntilDone:[NSThread isMainThread]];
+        }
 	}
 }
 
 /* ALWAYS CALLED ON MAIN THREAD! */
 - (void)reportFinished
 {
-
-//	NSLog( @"rawResponseData(%d) = %s", [rawResponseData length], [rawResponseData bytes] );
-	
 	if (delegate && [delegate respondsToSelector:didFinishSelector]) {
 		[delegate performSelector:didFinishSelector withObject:self];
 	}
@@ -2119,7 +2104,13 @@ static NSOperationQueue *sharedQueue = nil;
 	if ([self isPACFileRequest]) {
 		[failedRequest reportFailure];
 	} else {
-		[failedRequest performSelectorOnMainThread:@selector(reportFailure) withObject:nil waitUntilDone:[NSThread isMainThread]];
+        if (self.finishWithThread) {
+            [self reportFailure];
+        }
+        else
+        {
+            [failedRequest performSelectorOnMainThread:@selector(reportFailure) withObject:nil waitUntilDone:[NSThread isMainThread]];
+        }
 	}
 	
     if (!inProgress)
@@ -2158,7 +2149,7 @@ static NSOperationQueue *sharedQueue = nil;
 	[self setResponseStatusCode:(int)CFHTTPMessageGetResponseStatusCode(message)];
 	[self setResponseStatusMessage:[(NSString *)CFHTTPMessageCopyResponseStatusLine(message) autorelease]];
 
-	if ([self downloadCache] && ([[self downloadCache] canUseCachedDataForRequest:self] && 304 == [self responseStatusCode])) {
+	if ([self downloadCache] && ([[self downloadCache] canUseCachedDataForRequest:self])) {
 
 		// Update the expiry date
 		[[self downloadCache] updateExpiryForRequest:self maxAge:[self secondsToCache]];
@@ -2260,7 +2251,7 @@ static NSOperationQueue *sharedQueue = nil;
 		
 		NSString *connectionHeader = [[[self responseHeaders] objectForKey:@"Connection"] lowercaseString];
 
-		NSString *httpVersion = (NSString *)CFHTTPMessageCopyVersion(message);
+		NSString *httpVersion = NSMakeCollectable([(NSString *)CFHTTPMessageCopyVersion(message) autorelease]);
 		
 		// Don't re-use the connection if the server is HTTP 1.0 and didn't send Connection: Keep-Alive
 		if (![httpVersion isEqualToString:(NSString *)kCFHTTPVersion1_0] || [connectionHeader isEqualToString:@"keep-alive"]) {
@@ -2297,8 +2288,6 @@ static NSOperationQueue *sharedQueue = nil;
 				}
 			}
 		}
-		
-		[httpVersion release];
 	}
 
 	CFRelease(message);
@@ -3409,11 +3398,7 @@ static NSOperationQueue *sharedQueue = nil;
 	[progressLock lock];	
 	// Find out how much data we've uploaded so far
 	[self setLastBytesSent:totalBytesSent];	
-	
-	NSNumber * number = (NSNumber *)CFReadStreamCopyProperty((CFReadStreamRef)[self readStream], kCFStreamPropertyHTTPRequestBytesWrittenCount);
-	[self setTotalBytesSent:number.unsignedLongLongValue];
-	[number release];
-	
+	[self setTotalBytesSent:[NSMakeCollectable([(NSNumber *)CFReadStreamCopyProperty((CFReadStreamRef)[self readStream], kCFStreamPropertyHTTPRequestBytesWrittenCount) autorelease]) unsignedLongLongValue]];
 	[self setComplete:YES];
 	if (![self contentLength]) {
 		[self setContentLength:[self totalBytesRead]];
@@ -3655,8 +3640,9 @@ static NSOperationQueue *sharedQueue = nil;
 }
 
 - (void)handleStreamError
+
 {
-	NSError *underlyingError = (NSError *)CFReadStreamCopyError((CFReadStreamRef)[self readStream]);
+	NSError *underlyingError = NSMakeCollectable([(NSError *)CFReadStreamCopyError((CFReadStreamRef)[self readStream]) autorelease]);
 
 	if (![self error]) { // We may already have handled this error
 		
@@ -3668,7 +3654,6 @@ static NSOperationQueue *sharedQueue = nil;
 		if (([[underlyingError domain] isEqualToString:NSPOSIXErrorDomain] && ([underlyingError code] == ENOTCONN || [underlyingError code] == EPIPE)) 
 			|| ([[underlyingError domain] isEqualToString:(NSString *)kCFErrorDomainCFNetwork] && [underlyingError code] == -1005)) {
 			if ([self retryUsingNewConnection]) {
-				[underlyingError release];
 				return;
 			}
 		}
@@ -3688,8 +3673,6 @@ static NSOperationQueue *sharedQueue = nil;
 	} else {
 		[self cancelLoad];
 	}
-	
-	[underlyingError release];
 	[self checkRequestStatus];
 }
 
@@ -3837,34 +3820,25 @@ static NSOperationQueue *sharedQueue = nil;
 		} else {
 
 #if TARGET_OS_IPHONE
-			NSDictionary *proxySettings = (NSDictionary *)CFNetworkCopySystemProxySettings();
+			NSDictionary *proxySettings = NSMakeCollectable([(NSDictionary *)CFNetworkCopySystemProxySettings() autorelease]);
 #else
-			NSDictionary *proxySettings = (NSDictionary *)SCDynamicStoreCopyProxies(NULL);
+			NSDictionary *proxySettings = NSMakeCollectable([(NSDictionary *)SCDynamicStoreCopyProxies(NULL) autorelease]);
 #endif
 
-			proxies = (NSArray *)CFNetworkCopyProxiesForURL((CFURLRef)[self url], (CFDictionaryRef)proxySettings);
+			proxies = NSMakeCollectable([(NSArray *)CFNetworkCopyProxiesForURL((CFURLRef)[self url], (CFDictionaryRef)proxySettings) autorelease]);
 
 			// Now check to see if the proxy settings contained a PAC url, we need to run the script to get the real list of proxies if so
 			NSDictionary *settings = [proxies objectAtIndex:0];
 			if ([settings objectForKey:(NSString *)kCFProxyAutoConfigurationURLKey]) {
 				[self setPACurl:[settings objectForKey:(NSString *)kCFProxyAutoConfigurationURLKey]];
 				[self fetchPACFile];
-				
-				[proxies release];
-				[proxySettings release];
 				return NO;
-			}
-			else
-			{
-				[proxySettings release];
 			}
 		}
 
 		if (!proxies) {
 			[self setReadStream:nil];
 			[self failWithError:[NSError errorWithDomain:NetworkRequestErrorDomain code:ASIInternalErrorWhileBuildingRequestType userInfo:[NSDictionary dictionaryWithObjectsAndKeys:@"Unable to obtain information on proxy servers needed for request",NSLocalizedDescriptionKey,nil]]];
-			
-			[proxies release];
 			return NO;
 		}
 		// I don't really understand why the dictionary returned by CFNetworkCopyProxiesForURL uses different key names from CFNetworkCopySystemProxySettings/SCDynamicStoreCopyProxies
@@ -3875,8 +3849,6 @@ static NSOperationQueue *sharedQueue = nil;
 			[self setProxyPort:[[settings objectForKey:(NSString *)kCFProxyPortNumberKey] intValue]];
 			[self setProxyType:[settings objectForKey:(NSString *)kCFProxyTypeKey]];
 		}
-		
-		[proxies release];
 	}
 	return YES;
 }
@@ -4005,15 +3977,13 @@ static NSOperationQueue *sharedQueue = nil;
 
 		// Obtain the list of proxies by running the autoconfiguration script
 		CFErrorRef err = NULL;
-		NSArray *proxies = (NSArray *)CFNetworkCopyProxiesForAutoConfigurationScript((CFStringRef)script,(CFURLRef)[self url], &err);
+		NSArray *proxies = NSMakeCollectable([(NSArray *)CFNetworkCopyProxiesForAutoConfigurationScript((CFStringRef)script,(CFURLRef)[self url], &err) autorelease]);
 		if (!err && [proxies count] > 0) {
 			NSDictionary *settings = [proxies objectAtIndex:0];
 			[self setProxyHost:[settings objectForKey:(NSString *)kCFProxyHostNameKey]];
 			[self setProxyPort:[[settings objectForKey:(NSString *)kCFProxyPortNumberKey] intValue]];
 			[self setProxyType:[settings objectForKey:(NSString *)kCFProxyTypeKey]];
 		}
-		
-		[proxies release];
 	}
 }
 
@@ -4340,13 +4310,15 @@ static NSOperationQueue *sharedQueue = nil;
 	}
 }
 
-
 + (NSMutableArray *)sessionCookies
 {
+	[sessionCookiesLock lock];
 	if (!sessionCookies) {
-		[ASIHTTPRequest setSessionCookies:[[[NSMutableArray alloc] init] autorelease]];
+		[ASIHTTPRequest setSessionCookies:[NSMutableArray array]];
 	}
-	return sessionCookies;
+	NSMutableArray *cookies = [[sessionCookies retain] autorelease];
+	[sessionCookiesLock unlock];
+	return cookies;
 }
 
 + (void)setSessionCookies:(NSMutableArray *)newSessionCookies
@@ -4392,81 +4364,83 @@ static NSOperationQueue *sharedQueue = nil;
 
 + (NSString *)defaultUserAgentString
 {
-	// If we already have a default user agent set, return that
-	if (defaultUserAgent) {
-		return defaultUserAgent;
-	}
-	
-	// Otherwise, create a new user agent string (we'll save it for later reuse)
-	
-	NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+	@synchronized (self) {
 
-	// Attempt to find a name for this application
-	NSString *appName = [bundle objectForInfoDictionaryKey:@"CFBundleDisplayName"];
-	if (!appName) {
-		appName = [bundle objectForInfoDictionaryKey:@"CFBundleName"];	
-	}
+		if (!defaultUserAgent) {
 
-	NSData *latin1Data = [appName dataUsingEncoding:NSUTF8StringEncoding];
-	appName = [[[NSString alloc] initWithData:latin1Data encoding:NSISOLatin1StringEncoding] autorelease];
+			NSBundle *bundle = [NSBundle bundleForClass:[self class]];
 
-	// If we couldn't find one, we'll give up (and ASIHTTPRequest will use the standard CFNetwork user agent)
-	if (!appName) {
-		return nil;
-	}
+			// Attempt to find a name for this application
+			NSString *appName = [bundle objectForInfoDictionaryKey:@"CFBundleDisplayName"];
+			if (!appName) {
+				appName = [bundle objectForInfoDictionaryKey:@"CFBundleName"];
+			}
 
-	NSString *appVersion = nil;
-	NSString *marketingVersionNumber = [bundle objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
-    NSString *developmentVersionNumber = [bundle objectForInfoDictionaryKey:@"CFBundleVersion"];
-	if (marketingVersionNumber && developmentVersionNumber) {
-		if ([marketingVersionNumber isEqualToString:developmentVersionNumber]) {
-			appVersion = marketingVersionNumber;
-		} else {
-			appVersion = [NSString stringWithFormat:@"%@ rv:%@",marketingVersionNumber,developmentVersionNumber];
+			NSData *latin1Data = [appName dataUsingEncoding:NSUTF8StringEncoding];
+			appName = [[[NSString alloc] initWithData:latin1Data encoding:NSISOLatin1StringEncoding] autorelease];
+
+			// If we couldn't find one, we'll give up (and ASIHTTPRequest will use the standard CFNetwork user agent)
+			if (!appName) {
+				return nil;
+			}
+
+			NSString *appVersion = nil;
+			NSString *marketingVersionNumber = [bundle objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
+			NSString *developmentVersionNumber = [bundle objectForInfoDictionaryKey:@"CFBundleVersion"];
+			if (marketingVersionNumber && developmentVersionNumber) {
+				if ([marketingVersionNumber isEqualToString:developmentVersionNumber]) {
+					appVersion = marketingVersionNumber;
+				} else {
+					appVersion = [NSString stringWithFormat:@"%@ rv:%@",marketingVersionNumber,developmentVersionNumber];
+				}
+			} else {
+				appVersion = (marketingVersionNumber ? marketingVersionNumber : developmentVersionNumber);
+			}
+
+			NSString *deviceName;
+			NSString *OSName;
+			NSString *OSVersion;
+			NSString *locale = [[NSLocale currentLocale] localeIdentifier];
+
+			#if TARGET_OS_IPHONE
+				UIDevice *device = [UIDevice currentDevice];
+				deviceName = [device model];
+				OSName = [device systemName];
+				OSVersion = [device systemVersion];
+
+			#else
+				deviceName = @"Macintosh";
+				OSName = @"Mac OS X";
+
+				// From http://www.cocoadev.com/index.pl?DeterminingOSVersion
+				// We won't bother to check for systems prior to 10.4, since ASIHTTPRequest only works on 10.5+
+				OSErr err;
+				SInt32 versionMajor, versionMinor, versionBugFix;
+				err = Gestalt(gestaltSystemVersionMajor, &versionMajor);
+				if (err != noErr) return nil;
+				err = Gestalt(gestaltSystemVersionMinor, &versionMinor);
+				if (err != noErr) return nil;
+				err = Gestalt(gestaltSystemVersionBugFix, &versionBugFix);
+				if (err != noErr) return nil;
+				OSVersion = [NSString stringWithFormat:@"%u.%u.%u", versionMajor, versionMinor, versionBugFix];
+			#endif
+
+			// Takes the form "My Application 1.0 (Macintosh; Mac OS X 10.5.7; en_GB)"
+			[self setDefaultUserAgentString:[NSString stringWithFormat:@"%@ %@ (%@; %@ %@; %@)", appName, appVersion, deviceName, OSName, OSVersion, locale]];	
 		}
-	} else {
-		appVersion = (marketingVersionNumber ? marketingVersionNumber : developmentVersionNumber);
+		return [[defaultUserAgent retain] autorelease];
 	}
-	
-	
-	NSString *deviceName;
-	NSString *OSName;
-	NSString *OSVersion;
-	
-	NSString *locale = [[NSLocale currentLocale] localeIdentifier];
-	
-#if TARGET_OS_IPHONE
-	UIDevice *device = [UIDevice currentDevice];
-	deviceName = [device model];
-	OSName = [device systemName];
-	OSVersion = [device systemVersion];
-	
-#else
-	deviceName = @"Macintosh";
-	OSName = @"Mac OS X";
-	
-	// From http://www.cocoadev.com/index.pl?DeterminingOSVersion
-	// We won't bother to check for systems prior to 10.4, since ASIHTTPRequest only works on 10.5+
-    OSErr err;
-    SInt32 versionMajor, versionMinor, versionBugFix;
-	err = Gestalt(gestaltSystemVersionMajor, &versionMajor);
-	if (err != noErr) return nil;
-	err = Gestalt(gestaltSystemVersionMinor, &versionMinor);
-	if (err != noErr) return nil;
-	err = Gestalt(gestaltSystemVersionBugFix, &versionBugFix);
-	if (err != noErr) return nil;
-	OSVersion = [NSString stringWithFormat:@"%u.%u.%u", versionMajor, versionMinor, versionBugFix];
-	
-#endif
-	// Takes the form "My Application 1.0 (Macintosh; Mac OS X 10.5.7; en_GB)"
-	[self setDefaultUserAgentString:[NSString stringWithFormat:@"%@ %@ (%@; %@ %@; %@)", appName, appVersion, deviceName, OSName, OSVersion, locale]];	
-	return defaultUserAgent;
 }
 
 + (void)setDefaultUserAgentString:(NSString *)agent
 {
-	[defaultUserAgent release];
-	defaultUserAgent = [agent copy];
+	@synchronized (self) {
+		if (defaultUserAgent == agent) {
+			return;
+		}
+		[defaultUserAgent release];
+		defaultUserAgent = [agent copy];
+	}
 }
 
 
@@ -4484,12 +4458,7 @@ static NSOperationQueue *sharedQueue = nil;
 	if (!MIMEType) {
 		return @"application/octet-stream";
 	}
-	
-	NSString * temp = (NSString *)MIMEType;
-	NSString * result = [NSString stringWithString:temp];
-	[temp release];
-	
-	return result;
+    return NSMakeCollectable([(NSString *)MIMEType autorelease]);
 }
 
 #pragma mark bandwidth measurement / throttling
@@ -4530,11 +4499,6 @@ static NSOperationQueue *sharedQueue = nil;
 
 + (BOOL)isBandwidthThrottled
 {
-#if TARGET_OS_IPHONE
-	if ( forceThrottleBandwith )
-		return YES;
-#endif	// #if TARGET_OS_IPHONE
-	
 #if TARGET_OS_IPHONE
 	[bandwidthThrottlingLock lock];
 
@@ -4675,11 +4639,6 @@ static NSOperationQueue *sharedQueue = nil;
 	}
 }
 
-+ (void)setForceThrottleBandwidth:(BOOL)throttle
-{
-	forceThrottleBandwith = throttle;
-}
-
 + (void)throttleBandwidthForWWANUsingLimit:(unsigned long)limit
 {	
 	[bandwidthThrottlingLock lock];
@@ -4729,13 +4688,18 @@ static NSOperationQueue *sharedQueue = nil;
 
 + (void)setDefaultCache:(id <ASICacheDelegate>)cache
 {
-	[defaultCache release];
-	defaultCache = [cache retain];
+	@synchronized (self) {
+		[cache retain];
+		[defaultCache release];
+		defaultCache = cache;
+	}
 }
 
 + (id <ASICacheDelegate>)defaultCache
 {
-	return defaultCache;
+    @synchronized(self) {
+        return [[defaultCache retain] autorelease];
+    }
 }
 
 
@@ -4798,9 +4762,13 @@ static NSOperationQueue *sharedQueue = nil;
 // If you have multiple requests sharing the thread or you want to re-use the thread, you'll need to restart the runloop
 + (NSThread *)threadForRequest:(ASIHTTPRequest *)request
 {
-	if (!networkThread) {
-		networkThread = [[NSThread alloc] initWithTarget:self selector:@selector(runRequests) object:nil];
-		[networkThread start];
+	if (networkThread == nil) {
+		@synchronized(self) {
+			if (networkThread == nil) {
+				networkThread = [[NSThread alloc] initWithTarget:self selector:@selector(runRequests) object:nil];
+				[networkThread start];
+			}
+		}
 	}
 	return networkThread;
 }
@@ -4989,6 +4957,7 @@ static NSOperationQueue *sharedQueue = nil;
 #endif
 
 #pragma mark ===
+@synthesize finishWithThread;
 
 @synthesize username;
 @synthesize password;

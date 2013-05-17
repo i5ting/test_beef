@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/netdev/!svn/ver/263743/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/Base64
+END
+base64.m
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/netdev/!svn/ver/245849/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/Base64/base64.m
+END
+NSData+base64.h
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/netdev/!svn/ver/263743/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/Base64/NSData+base64.h
+END
+NSData+base64.mm
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/netdev/!svn/ver/263743/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/Base64/NSData+base64.mm
+END
+base64.h
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/netdev/!svn/ver/245849/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/Base64/base64.h
+END

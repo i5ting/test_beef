@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/netdev/!svn/ver/244670/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/Supported/WeiBo/WeiboEngine/OAuth/Crypto
+END
+Base64Transcoder.h
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/netdev/!svn/ver/244670/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/Supported/WeiBo/WeiboEngine/OAuth/Crypto/Base64Transcoder.h
+END
+sha1.h
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/netdev/!svn/ver/244670/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/Supported/WeiBo/WeiboEngine/OAuth/Crypto/sha1.h
+END
+OAHMAC_SHA1SignatureProvider.h
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/netdev/!svn/ver/244670/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/Supported/WeiBo/WeiboEngine/OAuth/Crypto/OAHMAC_SHA1SignatureProvider.h
+END
+OASignatureProviding.h
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/netdev/!svn/ver/244670/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/Supported/WeiBo/WeiboEngine/OAuth/Crypto/OASignatureProviding.h
+END
+hmac.c
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/netdev/!svn/ver/244670/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/Supported/WeiBo/WeiboEngine/OAuth/Crypto/hmac.c
+END
+Base64Transcoder.c
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/netdev/!svn/ver/244670/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/Supported/WeiBo/WeiboEngine/OAuth/Crypto/Base64Transcoder.c
+END
+OAHMAC_SHA1SignatureProvider.m
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/netdev/!svn/ver/244670/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/Supported/WeiBo/WeiboEngine/OAuth/Crypto/OAHMAC_SHA1SignatureProvider.m
+END
+sha1.c
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/netdev/!svn/ver/244670/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/Supported/WeiBo/WeiboEngine/OAuth/Crypto/sha1.c
+END
+hmac.h
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/netdev/!svn/ver/244670/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/Supported/WeiBo/WeiboEngine/OAuth/Crypto/hmac.h
+END

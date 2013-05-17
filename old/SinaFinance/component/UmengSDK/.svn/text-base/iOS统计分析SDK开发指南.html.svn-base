@@ -1,0 +1,455 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+*{margin:0;padding:0;}
+body {
+	font:13.34px helvetica,arial,freesans,clean,sans-serif;
+	color:black;
+	line-height:1.4em;
+	background-color: #F8F8F8;
+	padding: 0.7em;
+}
+p {
+	margin:1em 0;
+	line-height:1.5em;
+}
+table {
+	font-size:inherit;
+	font:100%;
+	margin:1em;
+}
+table th{border-bottom:1px solid #bbb;padding:.2em 1em;}
+table td{border-bottom:1px solid #ddd;padding:.2em 1em;}
+input[type=text],input[type=password],input[type=image],textarea{font:99% helvetica,arial,freesans,sans-serif;}
+select,option{padding:0 .25em;}
+optgroup{margin-top:.5em;}
+pre,code{font:12px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;}
+pre {
+	margin:1em 0;
+	font-size:12px;
+	background-color:#eee;
+	border:1px solid #ddd;
+	padding:5px;
+	line-height:1.5em;
+	color:#444;
+	overflow:auto;
+	-webkit-box-shadow:rgba(0,0,0,0.07) 0 1px 2px inset;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;border-radius:3px;
+}
+pre code {
+	padding:0;
+	font-size:12px;
+	background-color:#eee;
+	border:none;
+}
+code {
+	font-size:12px;
+	background-color:#f8f8ff;
+	color:#444;
+	padding:0 .2em;
+	border:1px solid #dedede;
+}
+img{border:0;max-width:100%;}
+abbr{border-bottom:none;}
+a{color:#4183c4;text-decoration:none;}
+a:hover{text-decoration:underline;}
+a code,a:link code,a:visited code{color:#4183c4;}
+h2,h3{margin:1em 0;}
+h1,h2,h3,h4,h5,h6{border:0;}
+h1{font-size:170%;border-top:4px solid #aaa;padding-top:.5em;margin-top:1.5em;}
+h1:first-child{margin-top:0;padding-top:.25em;border-top:none;}
+h2{font-size:150%;margin-top:1.5em;border-top:4px solid #e0e0e0;padding-top:.5em;}
+h3{margin-top:1em;}
+hr{border:1px solid #ddd;}
+ul{margin:1em 0 1em 2em;}
+ol{margin:1em 0 1em 2em;}
+ul li,ol li{margin-top:.5em;margin-bottom:.5em;}
+ul ul,ul ol,ol ol,ol ul{margin-top:0;margin-bottom:0;}
+blockquote{margin:1em 0;border-left:5px solid #ddd;padding-left:.6em;color:#555;}
+dt{font-weight:bold;margin-left:1em;}
+dd{margin-left:2em;margin-bottom:1em;}
+@media screen and (min-width: 768px) {
+    body {
+        width: 748px;
+        margin:10px auto;
+    }
+}
+</style>
+<title>iOS 统计分析 SDK 使用指南</title>
+</head>
+<body>
+<h1><strong>iOS 统计分析 SDK 使用指南</strong></h1>
+
+<p><a name="1"></a></p>
+
+<h2>1. 介绍</h2>
+
+<p>友盟统计分析服务帮助你跟踪应用的用户使用行为，并且通过友盟的网站后台，提供良好的数据展示。我们目前支持iOS，Android，Windows Phone的平台。您可以在五分钟内轻松完成集成过程。</p>
+
+<p>下载的压缩包中将包括以下内容：</p>
+
+<ul>
+<li><strong>changes_log.html：</strong> 该文件记录友盟SDK的更新日志</li>
+<li><strong>Demo/：</strong> 该文件夹内为Demo工程</li>
+<li><strong>iOS统计分析SDK开发指南.html：</strong> 该文件介绍如何使用统计分析SDK</li>
+<li><strong>libMobClickLibrary.a：</strong> 该文件是SDK的binary文件</li>
+<li><strong>MobClick.h：</strong> 该文件是SDK的头文件</li>
+</ul>
+
+
+<p><a name="2"></a></p>
+
+<h2>2. 集成指南</h2>
+
+<h3>1.建立App，下载SDK</h3>
+
+<p>登录你的帐号后，看到友盟的管理后台，点击"添加新应用"，进入新应用信息填写的页面。</p>
+
+<div style="float:left;width:100%;">
+<a href="http://dev.umeng.com/images/guide/add_app.png"><img src="http://dev.umeng.com/images/guide/small/add_app.png"/></a>
+</div>
+
+
+<div style="clear:both"></div>
+
+
+<p>在新应用信息填写中，请尽量填写真实的信息。 App建立成功后，可以获得该App的AppKey，以及最新的开发指南和SDK文件。
+<br/></p>
+
+<div style="float:left;width:100%;">
+<a href="http://dev.umeng.com/images/guide/1ios.png"><img src="http://dev.umeng.com/images/guide/small/1ios.png"/></a>
+<a href="http://dev.umeng.com/images/guide/sdk_download_ios.png"><img src="http://dev.umeng.com/images/guide/small/sdk_download_ios.png"/></a>
+</div>
+
+
+<div style="clear:both"></div>
+
+
+<blockquote><p><strong>提示</strong><br/>
+您可以通过友盟统计分析平台的特性节省重复建立App的时间。如果您要对App不同的发布渠道进行统计，不需要创建新App （具体使用请查看 5.使用多渠道统计），通过多渠道统计，您可以更方便的对比数据。</p></blockquote>
+
+<h3>2.加入XCode工程，实现基本使用</h3>
+
+<ul>
+<li><p>导入SDK</p>
+
+<ul>
+<li><a href="http://dev.umeng.com/sdkdownload/sdkdownload_ios.html">下载</a> Analytics_iPhone_SDK.zip并解压缩</li>
+<li>可以看到： <code>MobClick.h</code> 和 <code>libMobClickLibrary.a</code></li>
+<li><p>导入插件<br/>
+请在你的工程目录结构中，右键选择<code>Add-&gt;Existing Files…</code>，选择这两个文件。或者将这两个文件拖入XCode工程目录结构中，在弹出的界面中勾选<code>Copy items into destination group's folder(if needed)</code>, 并确保<code>Add To Targets</code>勾选相应的target。</p></li>
+<li><p>添加依赖框架(<code>Framework</code>)和编译器选项<br/>
+<code>TARGETS</code>&ndash;><code>Build Phases</code>&ndash;><code>Link Binary With Libraries</code>&ndash;> <code>+</code> &ndash;><code>libz.dylib</code></p>
+
+<p>如果是从老版本友盟SDK( <code>&lt; 1.6.8</code> )升级过来，other linker flag里有-all_load -ObjC的话也最好一并去掉，友盟SDK已经不需要这两个参数了.</p></li>
+</ul>
+</li>
+<li><p>嵌入代码</p>
+
+<ul>
+<li><p>打开<code>*AppDelegate.m</code>(*代表你的工程名字）
+在<br/><code>- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions</code> <br />方法内添加如下语句：<br /></p>
+
+<pre><code>  [MobClick startWithAppkey:@"xxxxxxxxxxxxxxx"];
+</code></pre>
+
+<p>应用程序每次只在启动时会向服务器发送一次消息(BATCH策略)，在应用使用过程中产生的所有消息都会在下次启动时候发送。 如果应用程序启动时处在不联网状态，那么消息将会缓存在本地，下次再尝试发送。<br/><br/>如果需要使用实时(REALTIME策略)发送方式，或者修改渠道名称(<code>channelId</code>)，请使用下面的方法：</p>
+
+<pre><code>  [MobClick startWithAppkey:@"xxxxxxxxxxxxxxx" reportPolicy:REALTIME channelId:nil];
+</code></pre>
+
+<p>(使用建议，建议使用<code>REALTIME</code>策略，数据实时性更高， <code>channelId</code> 为<code>nil</code>或<code>@""</code>时，默认会被被当作<code>@"App Store"</code>渠道)
+其中ReportPolicy可选值有: <code>REALTIME</code>,<code>BATCH</code>,<code>SENDDAILY</code>,<code>SENDWIFIONLY</code>。</p></li>
+</ul>
+</li>
+</ul>
+
+
+<p>到此，基本统计功能集成已经完成。</p>
+
+<p><a name="3"></a></p>
+
+<h2>3.使用自定义事件</h2>
+
+<p>使用自定义事件功能请先在网站应用管理后台(设置->编辑自定义事件)中添加相应的自定义事件后，服务器才会对相应的自定义事件请求进行处理。这里我们将提供几个简单而通用的接口：</p>
+
+<ul>
+<li><p>event数量统计</p>
+
+<ul>
+<li>  在您希望跟踪的代码部分，调用如下方法：</li>
+</ul>
+
+
+<pre><code>  [MobClick event:(NSString *)eventId];
+</code></pre>
+
+<p>  <code>eventId</code>为当前统计的事件ID。</p>
+
+<blockquote><p><strong>示例：</strong>统计微博应用中"转发"事件发生的次数，那么在转发的函数里调用</p></blockquote>
+
+<pre><code>  [MobClick event:@"Forward"];
+</code></pre>
+
+<ul>
+<li>如果想同时记录事件的不同属性及取值，可以调用如下方法：</li>
+</ul>
+
+
+<pre><code>  [MobClick event:(NSString *)eventId attributes:(NSDictionary *)attributes];
+</code></pre>
+
+<p>  attributes为当前事件的属性和取值（键值对）。</p>
+
+<blockquote><p><strong>示例：</strong>统计电商应用中“购买”事件发生的次数，以及购买的商品类型及数量，那么在购买的函数里调用：</p></blockquote>
+
+<pre><code>  NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:
+                        @"book", @"type", @"3", @"quantity", nil];
+  [MobClick event:@"purchase" attributes:dict];
+</code></pre>
+
+<ul>
+<li>有时，只需考虑事件在一个属性上的取值，可以调用如下方法：</li>
+</ul>
+
+
+<pre><code>  [MobClick event:(NSString *)eventId label:(NSString *)label];
+</code></pre>
+
+<p>  <code>label</code>为当前事件的取值。</p>
+
+<blockquote><p><strong>示例：</strong> 统计游戏中“死亡”事件发生的关卡数，那么可以在死亡的函数里调用</p></blockquote>
+
+<pre><code>  [MobClick event:@"player_dead" label:@"level"];
+</code></pre></li>
+<li><p>event时长统计<br>
+有的事件是持续发生的，需要记录其持续的时间，我们提供了两种解决方法。<br/>
+在事件开始和结束时调用<code>[MobClick beginEvent:]</code>和<code>[MobClick endEvent:]</code>两个函数。</p>
+
+<ul>
+<li> 如果只关心事件时长或事件对应的label时长，参考上面的方法参数。</li>
+</ul>
+
+
+<blockquote><p><strong>示例：</strong> 跟踪播放音乐事件发生的总时间，那么在音乐播放开始时调用：</p></blockquote>
+
+<pre><code>  [MobClick beginEvent:@"music_play"];
+</code></pre>
+
+<p>  在音乐播放结束时调用：</p>
+
+<pre><code>  [MobClick endEvent:@"music_play"];
+</code></pre>
+
+<ul>
+<li>  如果想追踪时长的事件包含多个属性，则在调用计时函数时需增加一个参数<code>"String flag"</code>，即</li>
+</ul>
+
+
+<pre><code>  [MobClick beginEvent:(NSString *)eventId primarykey:(NSString *)keyName attributes:(NSDictionary *)attributes];
+</code></pre>
+
+<pre><code>  [MobClick endEvent:(NSString *)eventId primarykey:(NSString *)keyName];
+</code></pre>
+
+<p>  <code>primarykey</code>这个参数用于和<code>event_id</code>一起标示一个唯一事件，并不会被统计；</p>
+
+<p>  对于同一个事件在<code>beginEvent</code>和<code>endEvent</code> 中要传递相同的<code>eventId</code> 和 <code>primarykey</code></p>
+
+<p>  <em>（为什么要增加<code>primarykey</code>，请看时长统计常见错误案例）</em></p>
+
+<p>  例如，跟踪每种类型的音乐播放了多久，那么在音乐播放开始时调用</p>
+
+<pre><code>  NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:
+                        @"popular", @"type", @"JJLin", @"artist",@"registered",@"User_status", nil];
+  [MobClick beginEvent:@"music" primarykey:@"m7" attributes:dict];
+</code></pre>
+
+<p>  在音乐播放结束时调用：</p>
+
+<pre><code>  [MobClick endEvent:@"music" primarykey:@"m7"];
+</code></pre>
+
+<ul>
+<li>自己计算并上传event时长</li>
+</ul>
+
+
+<p>  在您想跟踪时长的代码部分，调用如下方法（单位为毫秒）</p>
+
+<pre><code>  [MobClick event:(NSString *)eventId durations:(int)microseconds];
+  [MobClick event:(NSString *)eventId label:(NSString *)label durations:(int)microseconds];
+  [MobClick event:(NSString *)eventId attributes:(NSDictionary *)attributes durations:(int)microseconds];
+</code></pre>
+
+<p>  这种方法比较灵活，集成更方便，出错率较低。</p>
+
+<p>  时长是友盟统计的一个新功能，使用过程中可能会出现一些常见的错误，开发者应该尽量的避免。</p>
+
+<blockquote><p><strong>注意</strong><br/>
+  1.  每个<code>event</code>的<code>attributes</code>不能超过10个<br/>
+  2.  <code>eventId</code>、<code>attributes</code>中<code>key</code>和<code>value</code>都不能使用空格和特殊字符，且长度不能超过255个字符（否则将截取前255个字符）<br/>
+  3.  <code>id</code>， <code>ts</code>， <code>du</code>是保留字段，不能作为<code>eventId</code>及<code>key</code>的名称<br/></p></blockquote></li>
+</ul>
+
+
+<p><a name="4"></a></p>
+
+<h2>4.使用多渠道统计</h2>
+
+<p>当你选择多个分发渠道时，例如某Cydia源，或某网站，可以为不同渠道进行分发渠道的设定，分别打包成不同的渠道包，以便统计终端用户得到程序的来源。 如果您只有<code>App Store</code>一个分发渠道，则不再需要做设定，我们会默认标记为<code>App Store</code></p>
+
+<p>参照上面 (2.加入XCode工程，实现基本使用)</p>
+
+<blockquote><p><strong>注意：</strong><br/>每台设备仅记录首次安装激活的渠道，在其他渠道再次安装不会重复计量。
+ 所以在测试不同的渠道的时候，请使用不同的设备来分别测试。</p></blockquote>
+
+<p>例如您在91发布，需要统计91渠道：</p>
+
+<pre><code>- [MobClick startWithAppkey:@"xxxxxxxxxxxxxxx" reportPolicy:REALTIME channelId:@"91store"];
+</code></pre>
+
+<p>例如您在同步推发布，需要统计同步推渠道：</p>
+
+<pre><code>- [MobClick startWithAppkey:@"xxxxxxxxxxxxxxx" reportPolicy:REALTIME channelId:@"tongbu"];
+</code></pre>
+
+<p> <a name="5"></a></p>
+
+<h2>5.按渠道自动更新检测</h2>
+
+<p>在友盟的网站上分渠道提交app的版本号，更新日志及openURL后，您只需添加一行代码来完成自动更新检查。<br>
+请将下面代码添加到<code>[MobClick startWithAppkey:@"xxxxxxxxxxxxxxx"];</code>之后</p>
+
+<pre><code>[MobClick checkUpdate];
+</code></pre>
+
+<p>如果想对<code>UIAlertView</code>的标题和按钮文字做多国语言支持，则需要对下面三个词组做翻译。</p>
+
+<blockquote><p>  <code>umUpdateTitle</code>  ：标题</p>
+
+<p>  <code>umUpdateCancel</code> : 放弃按钮</p>
+
+<p>  <code>umUpdateOK</code>     : 确定按钮</p></blockquote>
+
+<p>当然您可以更简单的自定义标题和按钮的文字</p>
+
+<pre><code>[MobClick checkUpdate:@"New version" cancelButtonTitle:@"Skip" otherButtonTitles:@"Goto Store"];
+</code></pre>
+
+<p>如果默认的行为不满足你的需求，您可以完全自定义自动更新检查行为。只需实现</p>
+
+<pre><code>- (void)appUpdate:(NSDictionary *)appInfo;
+</code></pre>
+
+<p>这个<code>delegate</code>方法。<code>appInfo</code>是服务器传回来的app相关信息。</p>
+
+<p>Xcode4有两个版本号，一个是<code>Version</code>,另一个是<code>Build</code>,对应于Info.plist的字段名分别为<code>CFBundleShortVersionString</code>,<code>CFBundleVersion</code>。
+友盟SDK为了兼容Xcode3的工程，默认取的是<code>Build</code>号，如果需要取Xcode4的<code>Version</code>，可以使用下面
+的方法。</p>
+
+<pre><code>    NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+    [MobClick setAppVersion:version];
+</code></pre>
+
+<p><a name="6"></a></p>
+
+<h2>6.使用在线参数功能，可以让你动态修改应用中的参数值</h2>
+
+<blockquote><p><strong>示例：</strong> 动态修改应用的欢迎语，修改应用中开关选项的"on"或"off"，以及类似游戏中虚拟物品的价格。</p></blockquote>
+
+<p>您需要在</p>
+
+<pre><code>[MobClick startWithAppkey:@"xxxxxxxxxxxxxxx"];
+</code></pre>
+
+<p>之后添加</p>
+
+<pre><code>[MobClick updateOnlineConfig];
+</code></pre>
+
+<p>这句代码从服务器获取在线参数，并缓存本地。 当在项目里需要获取某个具体参数时调用</p>
+
+<pre><code>[MobClick getConfigParams:@"xxxx"];
+</code></pre>
+
+<p><code>xxxx</code>为友盟服务器上事先设置好的<code>key</code>。 如果你想获取所有的在线参数，请使用.</p>
+
+<pre><code>[MobClick getConfigParams];
+</code></pre>
+
+<p>这两个方法都是从<code>[NSUserDefaults standardUserDefaults]</code>获取缓存的值， 所以上面的<code>[MobClick updateOnlineConfig]</code>方法要先在app启动时被调用。</p>
+
+<blockquote><p><strong>注意：</strong><br/><code>updateOnlineConfig</code> 在app启动时 <code>application:didFinishLaunchingWithOptions:</code> 执行，前后台切换是不会执行的，如果需要在切换时更新在线参数，可以在相关回调里执行<code>updateOnlineConfig</code> 。</p></blockquote>
+
+<p>如果您需要知道在线参数何时获取完毕，可以监听 <code>UMOnlineConfigDidFinishedNotification</code> ,当这个通知发生时，最新的在线参数会传递给<code>notification.userInfo</code>。</p>
+
+<p>如果此时未联网或在线参数获取失败，这个通知是不会被发出的。</p>
+
+<p>您可以用类似下面的代码来完成这个过程:</p>
+
+<pre><code>[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onlineConfigCallBack:) name:UMOnlineConfigDidFinishedNotification object:nil];
+</code></pre>
+
+<pre><code>- (void)onlineConfigCallBack:(NSNotification *)notification {
+    NSLog(@"online config has fininshed and params = %@", notification.userInfo);
+}
+</code></pre>
+
+<p>最后别忘记调用<code>removeObserver:name:object:</code> 删除这个监听。</p>
+
+<p><a name="7"></a></p>
+
+<h2>7.动态调整发送策略</h2>
+
+<p>现在您可以在线更改SDK端的数据报告发送策略了，SDK将根据以下优先级决定最终的数据发送策略。<br/>
+在线配置指定的报告发送策略， 由API调用指定的报告发送策略， 默认使用启动时发送策略。</p>
+
+<p>和上面的使用在线参数功能一样，您需要在</p>
+
+<pre><code>[MobClick startWithAppkey:@"xxxxxxxxxxxxxxx"];
+</code></pre>
+
+<p>之后添加</p>
+
+<pre><code>[MobClick updateOnlineConfig];
+</code></pre>
+
+<p>这句代码从服务器获取在线参数，同时获取您的发送策略，并缓存本地。 剩下的都交给友盟SDK来做了。<br/></p>
+
+<blockquote><p><strong>注意：</strong><br/><code>updateOnlineConfig</code> 在app启动时 <code>application:didFinishLaunchingWithOptions:</code> 执行，前后台切换是不会执行的，如果需要在切换时更新在线参数，可以在相关回调里执行<code>updateOnlineConfig</code> 。</p></blockquote>
+
+<p><a name="8"></a></p>
+
+<h2>8.页面访问路径统计</h2>
+
+<p>您可以统计每个View停留时长及路径。<br/>
+需要配对使用</p>
+
+<pre><code> - (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [MobClick beginLogPageView:@"PageOne"];
+}    
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [MobClick endLogPageView:@"PageOne"];
+}
+</code></pre>
+
+<p>如果您想自己传递时长（单位为秒），我们也提供了方法。</p>
+
+<pre><code> + (void)logPageView:(NSString *)pageName seconds:(int)seconds;
+</code></pre>
+
+<h1></h1>
+
+<p>如果在使用中遇到任何问题，如果你需要帮助，请联系我们<a href="ios.umeng.com">ios@umeng.com</a></p>
+
+<p>友盟团队</br>
+<a href="http://www.umeng.com">http://www.umeng.com</a></p>
+</body>
+</html>

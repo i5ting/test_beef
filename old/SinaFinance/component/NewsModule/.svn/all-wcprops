@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/netdev/!svn/ver/297391/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/NewsModule
+END
+CommentContentList.h
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/netdev/!svn/ver/246833/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/NewsModule/CommentContentList.h
+END
+NewsFuncPuller.h
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/netdev/!svn/ver/266997/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/NewsModule/NewsFuncPuller.h
+END
+CommentContentCell.h
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/netdev/!svn/ver/264248/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/NewsModule/CommentContentCell.h
+END
+NewsListFuncPuller.m
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/netdev/!svn/ver/297391/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/NewsModule/NewsListFuncPuller.m
+END
+CommentContentList.m
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/netdev/!svn/ver/246833/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/NewsModule/CommentContentList.m
+END
+NewsFuncPuller.m
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/netdev/!svn/ver/266997/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/NewsModule/NewsFuncPuller.m
+END
+CommentContentCell.m
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/netdev/!svn/ver/264248/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/NewsModule/CommentContentCell.m
+END
+NewsListFuncPuller.h
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/netdev/!svn/ver/265965/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/NewsModule/NewsListFuncPuller.h
+END

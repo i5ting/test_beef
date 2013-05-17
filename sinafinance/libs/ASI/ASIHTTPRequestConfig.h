@@ -13,12 +13,18 @@
 
 // When set to 1 ASIHTTPRequests will print information about what a request is doing
 #ifndef DEBUG_REQUEST_STATUS
-	#define DEBUG_REQUEST_STATUS 1
+	#define DEBUG_REQUEST_STATUS 0
 #endif
 
 // When set to 1, ASIFormDataRequests will print information about the request body to the console
+#ifdef DEBUG
 #ifndef DEBUG_FORM_DATA_REQUEST
-	#define DEBUG_FORM_DATA_REQUEST 0
+	#define DEBUG_FORM_DATA_REQUEST 1
+#endif
+#else
+#ifndef DEBUG_FORM_DATA_REQUEST
+#define DEBUG_FORM_DATA_REQUEST 0
+#endif
 #endif
 
 // When set to 1, ASIHTTPRequests will print information about bandwidth throttling to the console
@@ -32,6 +38,12 @@
 #endif
 
 // When set to 1, ASIHTTPRequests will print information about HTTP authentication (Basic, Digest or NTLM) to the console
+#ifdef DEBUG
+#ifndef DEBUG_HTTP_AUTHENTICATION
+#define DEBUG_HTTP_AUTHENTICATION 1
+#endif
+#else
 #ifndef DEBUG_HTTP_AUTHENTICATION
 #define DEBUG_HTTP_AUTHENTICATION 0
+#endif
 #endif

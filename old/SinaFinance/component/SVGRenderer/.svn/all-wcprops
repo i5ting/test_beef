@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/netdev/!svn/ver/247638/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/SVGRenderer
+END
+IDrawable.h
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/netdev/!svn/ver/247638/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/SVGRenderer/IDrawable.h
+END
+ITransProvider.h
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/netdev/!svn/ver/247638/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/SVGRenderer/ITransProvider.h
+END
+Sprite.m
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/netdev/!svn/ver/247638/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/SVGRenderer/Sprite.m
+END
+SVGQuartzRenderer.h
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/netdev/!svn/ver/247638/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/SVGRenderer/SVGQuartzRenderer.h
+END
+QuadTreeNode.h
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/netdev/!svn/ver/247638/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/SVGRenderer/QuadTreeNode.h
+END
+SVGStyle.h
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/netdev/!svn/ver/247638/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/SVGRenderer/SVGStyle.h
+END
+SVGQuartzRenderer.m
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/netdev/!svn/ver/247638/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/SVGRenderer/SVGQuartzRenderer.m
+END
+QuadTreeNode.m
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/netdev/!svn/ver/247638/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/SVGRenderer/QuadTreeNode.m
+END
+SVGStyle.m
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/netdev/!svn/ver/247638/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/SVGRenderer/SVGStyle.m
+END
+Sprite.h
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/netdev/!svn/ver/247638/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/SVGRenderer/Sprite.h
+END

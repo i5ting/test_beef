@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/netdev/!svn/ver/289215/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/JSONConfigDownloader
+END
+JSONConfigDownloader.h
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/netdev/!svn/ver/266196/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/JSONConfigDownloader/JSONConfigDownloader.h
+END
+ConfigLocalSaver.h
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/netdev/!svn/ver/266196/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/JSONConfigDownloader/ConfigLocalSaver.h
+END
+JSONConfigDownloader.m
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/netdev/!svn/ver/289215/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/JSONConfigDownloader/JSONConfigDownloader.m
+END
+ConfigLocalSaver.m
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/netdev/!svn/ver/266196/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/JSONConfigDownloader/ConfigLocalSaver.m
+END

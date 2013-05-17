@@ -1,0 +1,130 @@
+//
+// Prefix header for all source files of the 'SinaFinance' target in the 'SinaFinance' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_4_0
+#warning "This project uses features only available in iOS SDK 4.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import "Common/UIImage+.h"
+    #import "OPCustomKeyboard.h"
+    #import "AppDelegate.h"
+    #import "SingleStockViewController.h"
+    #import "MobClick.h"
+    #import "SVProgressHUD.h"
+    #import "Util.h"
+#endif
+
+
+#define api_holiday_url @"http://m.sina.com.cn/iframe/device/config/sinafinance/hday.json"
+#define is_current_date_holiday_key @"is_current_date_holiday_key"
+
+#define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define UI_MAX_HEIGHT [UIScreen mainScreen].bounds.size.height
+
+
+
+//兼容ios6，旋转相关的新增api
+#if __IPHONE_OS_VERSION_MAX_ALLOWED <= __IPHONE_5_1
+#define UIInterfaceOrientationMaskPortrait  (1 << UIInterfaceOrientationPortrait)
+#define UIInterfaceOrientationMaskLandscapeLeft  (1 << UIInterfaceOrientationLandscapeLeft)
+#define UIInterfaceOrientationMaskLandscapeRight (1 << UIInterfaceOrientationLandscapeRight)
+#define UIInterfaceOrientationMaskPortraitUpsideDown  (1 << UIInterfaceOrientationPortraitUpsideDown)
+#define UIInterfaceOrientationMaskLandscape  (UIInterfaceOrientationMaskLandscapeLeft | UIInterfaceOrientationMaskLandscapeRight)
+#define UIInterfaceOrientationMaskAll  (UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskLandscapeLeft | UIInterfaceOrientationMaskLandscapeRight | UIInterfaceOrientationMaskPortraitUpsideDown)
+#define UIInterfaceOrientationMaskAllButUpsideDown (UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskLandscapeLeft | UIInterfaceOrientationMaskLandscapeRight)
+#endif
+
+
+
+#ifdef	_DEBUG
+#define	DNSLog(...);	NSLog(__VA_ARGS__);
+#define DNSLogMethod	NSLog(@"[%s] %@", class_getName([self class]), NSStringFromSelector(_cmd));
+#define DNSLogPoint(p)	NSLog(@"%f,%f", p.x, p.y);
+#define DNSLogSize(p)	NSLog(@"%f,%f", p.width, p.height);
+#define DNSLogRect(p)	NSLog(@"%f,%f %f,%f", p.origin.x, p.origin.y, p.size.width, p.size.height);
+
+CFAbsoluteTime startTime;
+#define D_START			startTime=CFAbsoluteTimeGetCurrent();
+#define D_END			DNSLog(@"[%s] %@ %f seconds", class_getName([self class]), NSStringFromSelector(_cmd), CFAbsoluteTimeGetCurrent() - startTime );
+#else
+#define DNSLog(...);	// NSLog(__VA_ARGS__);
+#define DNSLogMethod	// NSLog(@"[%s] %@", class_getName([self class]), NSStringFromSelector(_cmd) );
+#define DNSLogPoint(p)	// NSLog(@"%f,%f", p.x, p.y);
+#define DNSLogSize(p)	// NSLog(@"%f,%f", p.width, p.height);
+#define DNSLogRect(p)	// NSLog(@"%f,%f %f,%f", p.origin.x, p.origin.y, p.size.width, p.size.height);
+
+#define D_START			// CFAbsoluteTime startTime=CFAbsoluteTimeGetCurrent();
+#define D_END			// DNSLog(@"New %f seconds", CFAbsoluteTimeGetCurrent() - startTime );
+#endif
+
+#define SAFE_FREE(p) { if(p) { free(p); (p)=NULL; } }
+
+
+#ifndef OPCommon_h
+#define OPCommon_h
+
+#ifdef DEBUG
+#define OPLog(xx, ...)          NSLog(@"(%s)(line=%d): " xx, __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#define OPLogMethodName()       NSLog(@"(%s)(line=%d): ", __PRETTY_FUNCTION__, __LINE__)
+#define OPSimpleLog(xx, ...)    NSLog(@xx, ##__VA_ARGS__)
+#else
+#define OPLog(xx, ...)          ((void)0)
+#define OPLogMethodName()       ((void)0)
+#define OPSimpleLog(xx, ...)    ((void)0)
+#endif
+
+#define OPLogErr(xx, ...)      NSLog(@"[%s](line=%d)(%s): " xx, __FILE__, __LINE__, __PRETTY_FUNCTION__, ##__VA_ARGS__)
+
+#define IsPortait(direction) (direction == UIInterfaceOrientationPortrait || direction == UIInterfaceOrientationPortraitUpsideDown)
+ 
+
+#define OPLogAction(xx)   [[ProjectLogUploader getInstance] writeDataString:xx]
+
+#endif
+
+
+//#import "VTPG_Common.h"
+
+#define app_current_tab_index @"app_current_tab_index"
+
+#define NEWS_OPSCROLL_VIEW_HIGHT 157.0f
+
+
+
+
+//textcolor
+#define COLOR_WITH_RGB(r, g, b)    [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1.0]
+
+
+#ifdef DEBUG
+#define CCLog(_log_, ...) NSLog(_log_, ## __VA_ARGS__)
+#else
+#define CCLog(_log_, ...)
+#endif
+
+
+#define UMENG_KEY @"50c6dd3852701546820000e1"
+
+
+#define PUSH_CUR_COUNT_TIXING @"PUSH_CUR_COUNT_TIXING"
+#define PUSH_CUR_COUNT_XINWEN @"PUSH_CUR_COUNT_XINWEN"
+
+
+
+
+#define NewsRemindHistory_Has_Readed_Key @"NewsRemindHistory_Has_Readed_Key"
+#define TixingRemindHistory_Has_Readed_Key @"TixingRemindHistory_Has_Readed_Key"
+
+//push
+#define onDismissPushTixingViewAdd @"onDismissPushTixingViewAdd"
+
+
+//all tag define
+#define REFRESH_BTN_TAG 12357

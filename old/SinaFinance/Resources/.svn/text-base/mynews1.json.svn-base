@@ -1,0 +1,33 @@
+/*
+ 新闻页中，我的财经的配置文件
+ */
+{
+    "type":"mynews",
+    "api":"http://api.sina.com.cn/client.php",
+    "otherparam":{"s":"finance","a":"news", "format":"json"},
+    "data":
+    [
+     {"datakey":"","datavalue":"","dataname":"我的财经","data":
+     [
+      {"datakey":"column","datavalue":"index","dataname":"要闻"},
+      {"datakey":"column","datavalue":"top","dataname":"排行"},
+      {"datakey":"column","datavalue":"stock","dataname":"股票"},
+      {"datakey":"column","datavalue":"review","dataname":"评论"},
+      {"datakey":"column","datavalue":"chanjing","dataname":"产经","defaultshow":"0"},
+      {"datakey":"column","datavalue":"roll","dataname":"滚动","defaultshow":"0"},
+      {"datakey":"column","datavalue":"money","dataname":"理财","defaultshow":"0"},
+      {"datakey":"column","datavalue":"hkstock","dataname":"港股","defaultshow":"0"},
+      {"datakey":"column","datavalue":"usstock","dataname":"美股","defaultshow":"0"},
+      {"datakey":"column","datavalue":"fund","dataname":"基金","defaultshow":"0"},
+      {"datakey":"column","datavalue":"bank","dataname":"银行","defaultshow":"0"},
+      {"datakey":"column","datavalue":"insurance","dataname":"保险","defaultshow":"0"},
+      {"datakey":"column","datavalue":"futuremarket","dataname":"期货","defaultshow":"0"},
+      {"datakey":"column","datavalue":"forex","dataname":"外汇","defaultshow":"0"},
+      {"datakey":"column","datavalue":"it","dataname":"IT业界","defaultshow":"0"},
+      {"datakey":"column","datavalue":"consume","dataname":"消费","defaultshow":"0"},
+      {"datakey":"column","datavalue":"internet","dataname":"互联网","defaultshow":"0"},
+      {"datakey":"column","datavalue":"tele","dataname":"通信","defaultshow":"0"}
+     ]
+     }
+     ]
+}

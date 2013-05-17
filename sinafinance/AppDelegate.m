@@ -10,8 +10,6 @@
 #import "Bee.h"
 #import "Bee_Debug.h"
 // #import "Bee_UnitTest.h"
-#import "ProvideMessageForWeiboViewController.h"
-#import "SendMessageToWeiboViewController.h"
 
 #pragma mark -
 
@@ -28,11 +26,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {	
 	// [BeeUnitTest runTests];
-    
-    [WeiboSDK enableDebugMode:YES];
-    [WeiboSDK registerApp:kAppKey];
-    
-
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     self.window.backgroundColor = [UIColor whiteColor];
 	
@@ -56,7 +49,7 @@
     
     [self.window makeKeyAndVisible];
 	
-	[BeeDebugger show];
+//	[BeeDebugger show];
 
     return YES;
 }
@@ -87,78 +80,6 @@
 {
 	// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
-
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
-{
-    return [WeiboSDK handleOpenURL:url delegate:self];
-}
-
-- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
-    return [ WeiboSDK handleOpenURL:url delegate:self ];
-}
-
-#pragma mark - WeiboSDKDelegate 
-
-/**
- 收到一个来自微博客户端程序的请求
  
- 收到微博的请求后，第三方应用应该按照请求类型进行处理，处理完后必须通过 [WeiboSDK sendResponse:] 将结果回传给微博
- @param request 具体的请求对象
- */
-- (void)didReceiveWeiboRequest:(WBBaseRequest *)request
-{
-    
-   BeeUIBoard * board = (BeeUIBoard *)[[BeeUIBoard allBoards] objectAtIndex:0];
-    
-    
-    if ([request isKindOfClass:WBProvideMessageForWeiboRequest.class])
-    {
-        ProvideMessageForWeiboViewController *controller = [[[ProvideMessageForWeiboViewController alloc] init] autorelease];
-//        [self.viewController presentModalViewController:controller animated:YES];
-        
-        [board.stack presentViewController:controller animated:YES completion:^{
-           
-        }];
-    }
-}
-
-/**
- 收到一个来自微博客户端程序的响应
- 
- 收到微博的响应后，第三方应用可以通过响应类型、响应的数据和 [WBBaseResponse userInfo] 中的数据完成自己的功能
- @param response 具体的响应对象
- */
-- (void)didReceiveWeiboResponse:(WBBaseResponse *)response
-{
-    if ([response isKindOfClass:WBSendMessageToWeiboResponse.class])
-    {
-        NSString *title = @"发送结果";
-        NSString *message = [NSString stringWithFormat:@"响应状态: %d\n响应UserInfo数据: %@\n原请求UserInfo数据: %@",
-                             response.statusCode, response.userInfo, response.requestUserInfo];
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title
-                                                        message:message
-                                                       delegate:nil
-                                              cancelButtonTitle:@"确定"
-                                              otherButtonTitles:nil];
-        [alert show];
-        [alert release];
-    }
-    else if ([response isKindOfClass:WBAuthorizeResponse.class])
-    {
-        NSString *title = @"认证结果";
-        NSString *message = [NSString stringWithFormat:@"响应状态: %d\nresponse.userId: %@\nresponse.accessToken: %@\n响应UserInfo数据: %@\n原请求UserInfo数据: %@",
-                             response.statusCode, [(WBAuthorizeResponse *)response userID], [(WBAuthorizeResponse *)response accessToken], response.userInfo, response.requestUserInfo];
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title
-                                                        message:message
-                                                       delegate:nil
-                                              cancelButtonTitle:@"确定"
-                                              otherButtonTitles:nil];
-        [alert show];
-        [alert release];
-    }
-
-}
-
-
 
 @end

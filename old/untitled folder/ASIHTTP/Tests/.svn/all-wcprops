@@ -1,0 +1,179 @@
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/netdev/!svn/ver/244670/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/Supported/ASIHTTP/Tests
+END
+PerformanceTests.m
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/netdev/!svn/ver/244670/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/Supported/ASIHTTP/Tests/PerformanceTests.m
+END
+ASIFormDataRequestTests.m
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/netdev/!svn/ver/244670/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/Supported/ASIHTTP/Tests/ASIFormDataRequestTests.m
+END
+BlocksTests.h
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/netdev/!svn/ver/244670/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/Supported/ASIHTTP/Tests/BlocksTests.h
+END
+ASIWebPageRequestTests.h
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/netdev/!svn/ver/244670/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/Supported/ASIHTTP/Tests/ASIWebPageRequestTests.h
+END
+ClientCertificateTests.h
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/netdev/!svn/ver/244670/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/Supported/ASIHTTP/Tests/ClientCertificateTests.h
+END
+ProxyTests.h
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/netdev/!svn/ver/244670/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/Supported/ASIHTTP/Tests/ProxyTests.h
+END
+BlocksTests.m
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/netdev/!svn/ver/244670/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/Supported/ASIHTTP/Tests/BlocksTests.m
+END
+ASIDataCompressorTests.h
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/netdev/!svn/ver/244670/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/Supported/ASIHTTP/Tests/ASIDataCompressorTests.h
+END
+StressTests.h
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/netdev/!svn/ver/244670/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/Supported/ASIHTTP/Tests/StressTests.h
+END
+ASITestCase.h
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/netdev/!svn/ver/244670/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/Supported/ASIHTTP/Tests/ASITestCase.h
+END
+ASIHTTPRequestTests.h
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/netdev/!svn/ver/244670/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/Supported/ASIHTTP/Tests/ASIHTTPRequestTests.h
+END
+ASIWebPageRequestTests.m
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/netdev/!svn/ver/244670/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/Supported/ASIHTTP/Tests/ASIWebPageRequestTests.m
+END
+GHUnitTestMain.m
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/netdev/!svn/ver/244670/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/Supported/ASIHTTP/Tests/GHUnitTestMain.m
+END
+ClientCertificateTests.m
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/netdev/!svn/ver/244670/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/Supported/ASIHTTP/Tests/ClientCertificateTests.m
+END
+ProxyTests.m
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/netdev/!svn/ver/244670/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/Supported/ASIHTTP/Tests/ProxyTests.m
+END
+ASIDownloadCacheTests.h
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/netdev/!svn/ver/244670/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/Supported/ASIHTTP/Tests/ASIDownloadCacheTests.h
+END
+ASIDataCompressorTests.m
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/netdev/!svn/ver/244670/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/Supported/ASIHTTP/Tests/ASIDataCompressorTests.m
+END
+StressTests.m
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/netdev/!svn/ver/244670/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/Supported/ASIHTTP/Tests/StressTests.m
+END
+ASITestCase.m
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/netdev/!svn/ver/244670/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/Supported/ASIHTTP/Tests/ASITestCase.m
+END
+ASIHTTPRequestTests.m
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/netdev/!svn/ver/244670/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/Supported/ASIHTTP/Tests/ASIHTTPRequestTests.m
+END
+ASIS3RequestTests.h
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/netdev/!svn/ver/244670/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/Supported/ASIHTTP/Tests/ASIS3RequestTests.h
+END
+ASINetworkQueueTests.h
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/netdev/!svn/ver/244670/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/Supported/ASIHTTP/Tests/ASINetworkQueueTests.h
+END
+ASIDownloadCacheTests.m
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/netdev/!svn/ver/244670/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/Supported/ASIHTTP/Tests/ASIDownloadCacheTests.m
+END
+ASICloudFilesRequestTests.h
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/netdev/!svn/ver/244670/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/Supported/ASIHTTP/Tests/ASICloudFilesRequestTests.h
+END
+ASIS3RequestTests.m
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/netdev/!svn/ver/244670/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/Supported/ASIHTTP/Tests/ASIS3RequestTests.m
+END
+ASINetworkQueueTests.m
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/netdev/!svn/ver/244670/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/Supported/ASIHTTP/Tests/ASINetworkQueueTests.m
+END
+PerformanceTests.h
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/netdev/!svn/ver/244670/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/Supported/ASIHTTP/Tests/PerformanceTests.h
+END
+ASIFormDataRequestTests.h
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/netdev/!svn/ver/244670/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/Supported/ASIHTTP/Tests/ASIFormDataRequestTests.h
+END
+ASICloudFilesRequestTests.m
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/netdev/!svn/ver/244670/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/Supported/ASIHTTP/Tests/ASICloudFilesRequestTests.m
+END

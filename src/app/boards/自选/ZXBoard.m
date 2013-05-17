@@ -145,13 +145,7 @@
         negativeSpacer.width = -5;
         self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:negativeSpacer, btn_right, nil];
         [btn_right release];
-        
-        
-        UIButton *ssoButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-        [ssoButton setTitle:@"请求微博认证（SSO授权）" forState:UIControlStateNormal];
-        [ssoButton addTarget:self action:@selector(ssoButtonPressed) forControlEvents:UIControlEventTouchUpInside];
-        ssoButton.frame = CGRectMake(20, 250, 280, 50);
-        [self.view addSubview:ssoButton];
+     
 
 	}
 	else if ( [signal is:BeeUIBoard.DELETE_VIEWS] )
@@ -261,19 +255,6 @@
 - (NSMutableArray *)get_top_tab_data_source
 {
     return [NSMutableArray arrayWithObjects:@"沪深",@"港股",@"美股", nil];
-}
-
-
-- (void)ssoButtonPressed
-{
-    WBAuthorizeRequest *request = [WBAuthorizeRequest request];
-    request.redirectURI = kRedirectURI;
-    request.scope = @"email,direct_messages_write";
-    request.userInfo = @{@"SSO_From": @"ZXBoard",
-    @"Other_Info_1": [NSNumber numberWithInt:123],
-    @"Other_Info_2": @[@"obj1", @"obj2"],
-    @"Other_Info_3": @{@"key1": @"obj1", @"key2": @"obj2"}};
-    [WeiboSDK sendRequest:request];
 }
 
 

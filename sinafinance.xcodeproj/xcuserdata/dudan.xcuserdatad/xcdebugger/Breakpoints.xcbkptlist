@@ -138,38 +138,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "src/app/boards/&#33258;&#36873;/ZXBoard.m"
-         timestampString = "390282059.918341"
+         timestampString = "390361802.8317"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "203"
-         endingLineNumber = "203"
+         startingLineNumber = "197"
+         endingLineNumber = "197"
          landmarkName = "-handleMessage_ZXBoard_Message:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "sinafinance/AppDelegate.m"
-         timestampString = "390292725.05092"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "112"
-         endingLineNumber = "112"
-         landmarkName = "-didReceiveWeiboRequest:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "sinafinance/AppDelegate.m"
-         timestampString = "390295522.960707"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "149"
-         endingLineNumber = "149"
-         landmarkName = "-didReceiveWeiboResponse:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
