@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/netdev/!svn/ver/300945/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/ComposeWeiboViewController
+END
+ComposeWeiboViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/netdev/!svn/ver/294973/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/ComposeWeiboViewController/ComposeWeiboViewController.h
+END
+compose_bg.png
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/netdev/!svn/ver/250745/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/ComposeWeiboViewController/compose_bg.png
+END
+PageControllerView.h
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/netdev/!svn/ver/250745/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/ComposeWeiboViewController/PageControllerView.h
+END
+compose_smile.png
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/netdev/!svn/ver/250745/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/ComposeWeiboViewController/compose_smile.png
+END
+compose_metion.png
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/netdev/!svn/ver/250745/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/ComposeWeiboViewController/compose_metion.png
+END
+ComposeWeiboViewController.m
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/netdev/!svn/ver/306313/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/ComposeWeiboViewController/ComposeWeiboViewController.m
+END
+compose_sendbtn.png
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/netdev/!svn/ver/250745/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/ComposeWeiboViewController/compose_sendbtn.png
+END
+PageControllerView.m
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/netdev/!svn/ver/250745/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/ComposeWeiboViewController/PageControllerView.m
+END
+compose_topic.png
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/netdev/!svn/ver/250745/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/ComposeWeiboViewController/compose_topic.png
+END
+compose_pic_mai.png
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/netdev/!svn/ver/250745/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/ComposeWeiboViewController/compose_pic_mai.png
+END
+ComposeWeiboViewController.xib
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/netdev/!svn/ver/261614/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/ComposeWeiboViewController/ComposeWeiboViewController.xib
+END

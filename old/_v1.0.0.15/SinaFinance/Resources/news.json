@@ -1,0 +1,49 @@
+/*
+ 此配置文件支持两种模式，多层嵌套和多层并列模式
+ type字段,配置文件检索的关键字
+ api字段,新闻请求的关键url
+ */
+
+{
+    "type":"financenews",
+    "api":"http://api.sina.com.cn/client.php",
+    "otherparam":{"s":"finance","a":"news", "format":"json"},
+    "data":
+    [
+     {"datakey":"","datavalue":"","dataname":"要闻·评论","data":
+     [
+      {"datakey":"column","datavalue":"index","dataname":"要闻"},
+      {"datakey":"column","datavalue":"top","dataname":"排行"},
+      {"datakey":"column","datavalue":"review","dataname":"评论"},
+      {"datakey":"column","datavalue":"chanjing","dataname":"产经"},
+      {"datakey":"column","datavalue":"business","dataname":"副刊"},
+      {"datakey":"column","datavalue":"roll","dataname":"滚动"}
+     ]
+     },
+     {"datakey":"","datavalue":"","dataname":"股票·基金","data":
+     [
+      {"datakey":"column","datavalue":"stock","dataname":"沪深"},
+      {"datakey":"column","datavalue":"hkstock","dataname":"港股"},
+      {"datakey":"column","datavalue":"usstock","dataname":"美股"},
+      {"datakey":"column","datavalue":"fund","dataname":"基金"}
+      ]
+     },
+     {"datakey":"","datavalue":"","dataname":"理财·投资","data":
+     [
+      {"datakey":"column","datavalue":"money","dataname":"理财"},
+      {"datakey":"column","datavalue":"bank","dataname":"银行"},
+      {"datakey":"column","datavalue":"insurance","dataname":"保险"},
+      {"datakey":"column","datavalue":"futuremarket","dataname":"期货"},
+      {"datakey":"column","datavalue":"forex","dataname":"外汇"}
+      ]
+     },
+     {"datakey":"","datavalue":"","dataname":"科技·生活","data":
+     [
+      {"datakey":"column","datavalue":"it","dataname":"IT业界"},
+      {"datakey":"column","datavalue":"consume","dataname":"消费"},
+      {"datakey":"column","datavalue":"internet","dataname":"互联网"},
+      {"datakey":"column","datavalue":"tele","dataname":"通信"}
+      ]
+     }
+     ]
+}

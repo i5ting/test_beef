@@ -1,0 +1,204 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+*{margin:0;padding:0;}
+body {
+	font:13.34px helvetica,arial,freesans,clean,sans-serif;
+	color:black;
+	line-height:1.4em;
+	background-color: #F8F8F8;
+	padding: 0.7em;
+}
+p {
+	margin:1em 0;
+	line-height:1.5em;
+}
+table {
+	font-size:inherit;
+	font:100%;
+	margin:1em;
+}
+table th{border-bottom:1px solid #bbb;padding:.2em 1em;}
+table td{border-bottom:1px solid #ddd;padding:.2em 1em;}
+input[type=text],input[type=password],input[type=image],textarea{font:99% helvetica,arial,freesans,sans-serif;}
+select,option{padding:0 .25em;}
+optgroup{margin-top:.5em;}
+pre,code{font:12px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;}
+pre {
+	margin:1em 0;
+	font-size:12px;
+	background-color:#eee;
+	border:1px solid #ddd;
+	padding:5px;
+	line-height:1.5em;
+	color:#444;
+	overflow:auto;
+	-webkit-box-shadow:rgba(0,0,0,0.07) 0 1px 2px inset;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;border-radius:3px;
+}
+pre code {
+	padding:0;
+	font-size:12px;
+	background-color:#eee;
+	border:none;
+}
+code {
+	font-size:12px;
+	background-color:#f8f8ff;
+	color:#444;
+	padding:0 .2em;
+	border:1px solid #dedede;
+}
+img{border:0;max-width:100%;}
+abbr{border-bottom:none;}
+a{color:#4183c4;text-decoration:none;}
+a:hover{text-decoration:underline;}
+a code,a:link code,a:visited code{color:#4183c4;}
+h2,h3{margin:1em 0;}
+h1,h2,h3,h4,h5,h6{border:0;}
+h1{font-size:170%;border-top:4px solid #aaa;padding-top:.5em;margin-top:1.5em;}
+h1:first-child{margin-top:0;padding-top:.25em;border-top:none;}
+h2{font-size:150%;margin-top:1.5em;border-top:4px solid #e0e0e0;padding-top:.5em;}
+h3{margin-top:1em;}
+hr{border:1px solid #ddd;}
+ul{margin:1em 0 1em 2em;}
+ol{margin:1em 0 1em 2em;}
+ul li,ol li{margin-top:.5em;margin-bottom:.5em;}
+ul ul,ul ol,ol ol,ol ul{margin-top:0;margin-bottom:0;}
+blockquote{margin:1em 0;border-left:5px solid #ddd;padding-left:.6em;color:#555;}
+dt{font-weight:bold;margin-left:1em;}
+dd{margin-left:2em;margin-bottom:1em;}
+@media screen and (min-width: 768px) {
+    body {
+        width: 748px;
+        margin:10px auto;
+    }
+}
+</style>
+<title>iOS 统计分析 Release Note</title>
+</head>
+<body>
+<h1>iOS 统计分析 Release Note</h1>
+
+<h3>版本：v2.1.1</h3>
+
+<ul>
+<li>发布日期：2012.09.19</li>
+<li>主要更新：
+
+<ol>
+<li> 兼容iOS6,增加armv7s架构</li>
+</ol>
+</li>
+</ul>
+
+
+<hr />
+
+<h3>版本：v2.1.0</h3>
+
+<ul>
+<li>发布日期：2012.09.11</li>
+<li>主要更新：
+
+<ol>
+<li> 增加地理位置统计的接口</li>
+</ol>
+
+
+<p>  <code>+[MobClick setLocation:(CLLocation *)location]</code>;</p>
+
+<p>  <code>+[MobClick setLatitude:(double)latitude longitude:(double)longitude];</code></p>
+
+<ol>
+<li> <code>checkUpdate</code>方法对UIAlertView的标题和按钮文字增加i18N多国语言支持</li>
+<li> <code>event</code>在程序<code>launch</code>事件发生之后发送,修正用户集中在0点出现</li>
+<li> 错误报告发送逻辑修改，旧版本的crash在App更新时不再发送，避免旧版crash出现在新版本中</li>
+<li> 开放 <code>startSession</code>  接口,详见头文件注释说明</li>
+<li> 增加在线参数获取结束的<code>Notification</code>: <code>UMOnlineConfigDidFinishedNotification</code>，开发者可以监听此通知得到最新的在线参数</li>
+<li> 如果需要在webview中用js调用友盟接口，请使用https://github.com/marcuswestin/WebViewJavascriptBridge</li>
+</ol>
+</li>
+</ul>
+
+
+<hr />
+
+<h3>版本：v2.0.0</h3>
+
+<ul>
+<li>发布日期：2012.05.21</li>
+<li>主要更新：
+
+<ol>
+<li> event增加时长统计</li>
+<li> event增加属性统计，当event发生时可以回传多个相关属性</li>
+<li> 使用硬件UDID(uniqueIdentifier)为统计标准，兼有mac地址的统计</li>
+<li> 去掉静态编译的<code>libz</code>,使SDK binary文件 <code>libMobClickLibrary.a</code> 大小进一步缩减 <code>1.2M</code> —> <code>910K</code>, 但需要手动添加<code>libz.dylib</code></li>
+</ol>
+</li>
+</ul>
+
+
+<blockquote><p><code>TARGETS</code>–><code>Build Phases</code>–><code>Link Binary With Libraries</code>–> + –><code>libz.dylib</code></p></blockquote>
+
+<hr />
+
+<h3>版本：v1.7</h3>
+
+<ul>
+<li>发布日期：2012.03.28</li>
+<li>主要更新：
+
+<ol>
+<li> 简化SDK集成，一句代码集成友盟SDK([MobClick startWithAppkey:]),不再需要手动link framework</li>
+<li> SDK binary文件 libMobClickLibrary.a 大小缩减近40%,1.9M —> 1.2M</li>
+<li> 增加页面访问路径统计</li>
+<li> 增加openUDID标识数据</li>
+<li> 用mac地址替换UDID（可能会造成您的新增用户数据波动）</li>
+</ol>
+</li>
+</ul>
+
+
+<hr />
+
+<h3>版本：v1.6.8</h3>
+
+<ul>
+<li>发布日期：2011.12.16</li>
+<li>主要更新：
+
+<ol>
+<li> 按渠道自动更新检测</li>
+<li> 使用在线参数功能，可以让你动态修改应用中的参数值</li>
+<li> 动态调整发送策略</li>
+</ol>
+</li>
+</ul>
+
+
+<hr />
+
+<h3>版本：v1.6.7</h3>
+
+<ul>
+<li>发布日期：2011.11.23</li>
+<li>主要更新：
+
+<ol>
+<li> 解决gprs时、网络条件比较差时界面卡的情况。(去掉<code>Reachability.h</code>判断网络)</li>
+<li> 去掉<code>Other Linker Flags</code> 需要设置<code>-all_load</code>和<code>-ObjC</code></li>
+<li> 采用<code>NSNotificationCenter</code>监听App的打开和关闭事件，省去了集成SDK时需要手动调用<code>appLaunched</code>，<code>appTerminated</code>的步骤</li>
+<li> 增加 SDK log开关<code>+ (void)setLogEnabled:(BOOL)value;</code></li>
+<li> 增加异常捕捉开关<code>+ (void)setCrashReportEnabled:(BOOL)value;</code>,需要在<code>setDelegate</code>方法之前调用</li>
+<li> 用户反馈界面支持iPad</li>
+</ol>
+</li>
+</ul>
+
+</body>
+</html>

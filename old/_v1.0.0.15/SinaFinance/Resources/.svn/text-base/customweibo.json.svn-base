@@ -1,0 +1,14 @@
+/*
+ dataname为程序中的显示名
+ datavalue为微博帐号中的组名
+ */
+[  
+  {
+    "type":"customweibo",
+    "api":"",
+    "data":
+    [
+     {"datakey":"groupname","datavalue":"自定义1","dataname":"自定义1"},
+     {"datakey":"groupname","datavalue":"自定义2","dataname":"自定义2"}]
+  }
+]

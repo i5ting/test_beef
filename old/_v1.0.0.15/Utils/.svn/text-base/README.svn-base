@@ -1,0 +1,16 @@
+
+
+svnsetting.sh用法说明
+该脚本用处是让svn支持.a文件,默认是不支持的
+
+执行脚本
+     sh ${IPHONE_CLIENT_SVN_HOME}/Utils/svnsetting.sh
+
+说明IPHONE_CLIENT_SVN_HOME是svn checkout的本地目录
+
+原理：
+1. 在每个用户的主目录下有一个名为.subversion的隐藏文件夹，打开里面的config文件。     vi ~/.subversion/config
+2. 查找 [miscellany] 字段，即可看到下面有个 global-ignores 键名，默认为注释掉了的，这表示SVN已经将它们作为默认值了。
+3. 取消注释，把*.a 也去掉。完成。
+
+

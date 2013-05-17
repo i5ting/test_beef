@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/netdev/!svn/ver/262181/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/UIDevice-extension
+END
+UIDevice-Capabilities.m
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/netdev/!svn/ver/246833/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/UIDevice-extension/UIDevice-Capabilities.m
+END
+UIDevice-IOKitExtensions.h
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/netdev/!svn/ver/260960/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/UIDevice-extension/UIDevice-IOKitExtensions.h
+END
+UIDevice-Orientation.m
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/netdev/!svn/ver/246833/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/UIDevice-extension/UIDevice-Orientation.m
+END
+UIDevice-Reachability.h
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/netdev/!svn/ver/260960/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/UIDevice-extension/UIDevice-Reachability.h
+END
+UIDevice-Hardware.m
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/netdev/!svn/ver/246833/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/UIDevice-extension/UIDevice-Hardware.m
+END
+UIDevice-IOKitExtensions.m
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/netdev/!svn/ver/250908/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/UIDevice-extension/UIDevice-IOKitExtensions.m
+END
+Reachability.h
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/netdev/!svn/ver/262181/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/UIDevice-extension/Reachability.h
+END
+UIDevice-Reachability.m
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/netdev/!svn/ver/246833/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/UIDevice-extension/UIDevice-Reachability.m
+END
+wwanconnect.c
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/netdev/!svn/ver/246833/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/UIDevice-extension/wwanconnect.c
+END
+UIDevice-Capabilities.h
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/netdev/!svn/ver/246833/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/UIDevice-extension/UIDevice-Capabilities.h
+END
+Reachability.m
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/netdev/!svn/ver/262181/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/UIDevice-extension/Reachability.m
+END
+UIDevice-Orientation.h
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/netdev/!svn/ver/246833/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/UIDevice-extension/UIDevice-Orientation.h
+END
+wwanconnect.h
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/netdev/!svn/ver/246833/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/UIDevice-extension/wwanconnect.h
+END
+UIDevice-Hardware.h
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/netdev/!svn/ver/246833/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/UIDevice-extension/UIDevice-Hardware.h
+END

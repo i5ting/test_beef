@@ -1,0 +1,131 @@
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/netdev/!svn/ver/306345/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/AFNetWorking
+END
+AFHTTPClient.m
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/netdev/!svn/ver/306345/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/AFNetWorking/AFHTTPClient.m
+END
+AFNetworking.h
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/netdev/!svn/ver/306345/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/AFNetWorking/AFNetworking.h
+END
+AFXMLRequestOperation.h
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/netdev/!svn/ver/306345/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/AFNetWorking/AFXMLRequestOperation.h
+END
+AFNetworkActivityIndicatorManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/netdev/!svn/ver/306345/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/AFNetWorking/AFNetworkActivityIndicatorManager.h
+END
+UIImageView+AFNetworking.h
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/netdev/!svn/ver/306345/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/AFNetWorking/UIImageView+AFNetworking.h
+END
+AFXMLRequestOperation.m
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/netdev/!svn/ver/306345/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/AFNetWorking/AFXMLRequestOperation.m
+END
+AFNetworkActivityIndicatorManager.m
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/netdev/!svn/ver/306345/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/AFNetWorking/AFNetworkActivityIndicatorManager.m
+END
+AFJSONRequestOperation.h
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/netdev/!svn/ver/306345/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/AFNetWorking/AFJSONRequestOperation.h
+END
+AFURLConnectionOperation.h
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/netdev/!svn/ver/306345/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/AFNetWorking/AFURLConnectionOperation.h
+END
+UIImageView+AFNetworking.m
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/netdev/!svn/ver/306345/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/AFNetWorking/UIImageView+AFNetworking.m
+END
+AFJSONUtilities.h
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/netdev/!svn/ver/306345/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/AFNetWorking/AFJSONUtilities.h
+END
+AFJSONRequestOperation.m
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/netdev/!svn/ver/306345/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/AFNetWorking/AFJSONRequestOperation.m
+END
+AFURLConnectionOperation.m
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/netdev/!svn/ver/306345/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/AFNetWorking/AFURLConnectionOperation.m
+END
+AFHTTPRequestOperation.h
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/netdev/!svn/ver/306345/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/AFNetWorking/AFHTTPRequestOperation.h
+END
+AFPropertyListRequestOperation.h
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/netdev/!svn/ver/306345/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/AFNetWorking/AFPropertyListRequestOperation.h
+END
+AFJSONUtilities.m
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/netdev/!svn/ver/306345/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/AFNetWorking/AFJSONUtilities.m
+END
+AFImageRequestOperation.h
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/netdev/!svn/ver/306345/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/AFNetWorking/AFImageRequestOperation.h
+END
+AFHTTPRequestOperation.m
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/netdev/!svn/ver/306345/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/AFNetWorking/AFHTTPRequestOperation.m
+END
+AFHTTPClient.h
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/netdev/!svn/ver/306345/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/AFNetWorking/AFHTTPClient.h
+END
+AFPropertyListRequestOperation.m
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/netdev/!svn/ver/306345/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/AFNetWorking/AFPropertyListRequestOperation.m
+END
+AFImageRequestOperation.m
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/netdev/!svn/ver/306345/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/component/AFNetWorking/AFImageRequestOperation.m
+END

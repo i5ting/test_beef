@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/netdev/!svn/ver/244670/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/Supported/WeiBo/WeiboEngine/Client
+END
+WeiboConnection.m
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/netdev/!svn/ver/244670/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/Supported/WeiBo/WeiboEngine/Client/WeiboConnection.m
+END
+RequestFile.m
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/netdev/!svn/ver/244670/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/Supported/WeiBo/WeiboEngine/Client/RequestFile.m
+END
+SinaWeiboClient.h
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/netdev/!svn/ver/244670/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/Supported/WeiBo/WeiboEngine/Client/SinaWeiboClient.h
+END
+SinaWeiboClient.m
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/netdev/!svn/ver/244670/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/Supported/WeiBo/WeiboEngine/Client/SinaWeiboClient.m
+END
+WeiboConnection.h
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/netdev/!svn/ver/244670/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/Supported/WeiBo/WeiboEngine/Client/WeiboConnection.h
+END
+RequestFile.h
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/netdev/!svn/ver/244670/mobile/finance_iPhone/branches/SinaFinance_v1.0.0.15/SinaFinance/Supported/WeiBo/WeiboEngine/Client/RequestFile.h
+END
